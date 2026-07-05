@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    name: Repo structure & hygiene
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Required files present
+        run: |
+          set -e
+          for f in LICENSE README.md CHANGELOG.md docs/ghana-ehr-master-plan.md docs/VERSIONS.md work-packages/README.md; do
+            test -f "$f" || { echo "MISSING: $f"; exit 1; }
+          done
+          echo "Structure OK"
+
+      - name: No Windows Zone.Identifier artifacts
+        run: |
+          ! find . -name '*:Zone.Identifier' -o -name '*Zone.Identifier*' | grep -v '^\./\.git' | grep . || { echo "Zone.Identifier files committed"; exit 1; }
+
+      - name: Secret scan (gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # Grows with the codebase:
+  #   WP-008 adds: lint → unit tests → build OMODs/ESMs → Trivy scan → docker
+  #   build → push GHCR (digest-pinned) → staging auto-deploy → Playwright smoke.
+  #   WP-021 adds the permanent two-user isolation suite as a required check.

@@ -1,0 +1,31 @@
+# Build artifacts
+target/
+dist/
+build/
+node_modules/
+*.omod
+*.jar
+!gradle/wrapper/*.jar
+
+# IDE / editor
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# OS / WSL artifacts
+.DS_Store
+*:Zone.Identifier
+
+# Env & secrets — real secrets live only in the private sankofa-secrets repo (SOPS/age)
+.env
+.env.*
+!.env.example
+*.age
+*.pem
+*.key
+
+# Local runtime data
+*.log
+docker-volumes/
+.openmrs/
