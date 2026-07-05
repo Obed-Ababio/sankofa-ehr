@@ -12,7 +12,8 @@ Target: productive on a clean machine in ≤ 30 minutes (WP-002 AC).
 ## Run the stack
 
 ```bash
-make dev        # starts the stack; first boot ~5–15 min (DB setup)
+make dev        # starts the stack; first boot loads demo data — 15 min to
+                # ~75 min depending on hardware (observed 73 min on WSL2)
 make dev-logs   # watch the backend come up ("Started" health endpoint)
 ```
 

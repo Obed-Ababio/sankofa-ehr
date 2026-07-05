@@ -3,7 +3,7 @@
 | Field | Value |
 | --- | --- |
 | **Phase** | 0 — Weeks 1–2 |
-| **Status** | in-progress |
+| **Status** | review |
 | **Depends on** | WP-000 |
 | **Estimate** | TBD — expand when picking up this WP |
 
@@ -24,7 +24,7 @@
 **Out of scope:** TBD — expand when picking up this WP
 
 **Acceptance criteria:**
-- [ ] `compose up` → login works.
+- [x] `compose up` → login works. *(verified 2026-07-05, log below)*
 - [x] Every version in `VERSIONS.md` cites a URL.
 - [x] NO version numbers invented.
 
@@ -45,4 +45,7 @@ Findings needing attention:
 4. RefApp compose pins `mariadb:10.11.7`; we pin latest LTS patch 10.11.18 for our own assembly (WP-010).
 5. Local dev machine has Node v21.1.0 (non-LTS); LTS is v24.x — upgrade in WP-002.
 
-Stock spin-up: RefApp cloned at tag `3.7.0`, `TAG=3.7.0 docker compose up -d` on local Docker (scratchpad checkout; stack is stock/unmodified per AC). Login verification result recorded below when boot completes.
+Stock spin-up: RefApp cloned at tag `3.7.0`, `TAG=3.7.0 docker compose up -d` on local Docker (unmodified stock stack per AC). **Login verified**: `GET /openmrs/ws/rest/v1/session` with `admin/Admin123` returned `"authenticated":true` (Super User); SPA login page served throughout. Boot observations worth keeping:
+- First boot took **~73 minutes** on a WSL2 dev machine — dominated by the stock demo Open Concept Lab (CIEL) import running as the initial-setup daemon task; `/openmrs/health/started` stays 503 (and REST 302s to `/initialsetup`) until it finishes, even while the Docker healthcheck reports "healthy". Poll `/health/started`, not the container status.
+- The OCL demo import logged ~18 `SavingException` errors ("concept has not been imported" for some CIEL mappings) — stock demo-data noise, non-fatal. Not relevant to our distro: WP-014 loads CIEL from a packaged release, not OCL demo import.
+- `make dev` (WP-002) wraps exactly this stack; the quickstart's "5–15 min" estimate should be read as "up to ~75 min on modest hardware for the very first boot".
