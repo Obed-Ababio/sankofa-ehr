@@ -1,0 +1,20 @@
+# WP-004 candidate-region endpoints. Format: region-label|https-url
+# These are public service endpoints usable for connect/TLS/TTFB timing;
+# HTTP status doesn't matter (403/405 are fine), only the wire timings.
+#
+# AWS: per-region S3 + DynamoDB endpoints (documented, stable DNS).
+aws-af-south-1-s3|https://s3.af-south-1.amazonaws.com/
+aws-af-south-1-ddb|https://dynamodb.af-south-1.amazonaws.com/
+aws-eu-west-1-s3|https://s3.eu-west-1.amazonaws.com/
+aws-eu-west-1-ddb|https://dynamodb.eu-west-1.amazonaws.com/
+aws-eu-west-2-s3|https://s3.eu-west-2.amazonaws.com/
+aws-eu-west-2-ddb|https://dynamodb.eu-west-2.amazonaws.com/
+#
+# Azure South Africa North: there is no stable public per-region HTTP endpoint
+# without owning a resource there. Before the real measurement run, create a
+# throwaway storage account in ZA-North and put its blob URL here, e.g.:
+# azure-za-north-blob|https://<your-account>.blob.core.windows.net/
+# (Interim manual check: https://www.azurespeed.com from the Ghana vantage.)
+#
+# Cloudflare (fronts the app per §4.1 — measures the edge, not the origin):
+cloudflare-edge|https://www.cloudflare.com/cdn-cgi/trace

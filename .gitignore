@@ -25,6 +25,11 @@ node_modules/
 *.pem
 *.key
 
+# Local dev cache (make dev clones the pinned stock refapp here until WP-010)
+.cache/
+# WP-004 raw measurement output (archive curated CSVs under docs/sources/)
+infra/region-latency/results-*.csv
+
 # Local runtime data
 *.log
 docker-volumes/
