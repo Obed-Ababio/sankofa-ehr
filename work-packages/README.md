@@ -14,7 +14,7 @@ means the catalog specifies none.
 | WP-000 | Bootstrap | 0 | done | — | [WP-000-bootstrap.md](./WP-000-bootstrap.md) |
 | WP-001 | Version pinning & stock spin-up | 0 | review | WP-000 | [WP-001-version-pinning.md](./WP-001-version-pinning.md) |
 | WP-002 | Dev environment & Makefile | 0 | in-progress | WP-001 | [WP-002-dev-environment.md](./WP-002-dev-environment.md) |
-| WP-003 | Accounts & secrets base | 0 | todo | — | [WP-003-accounts-secrets.md](./WP-003-accounts-secrets.md) |
+| WP-003 | Accounts & secrets base | 0 | in-progress | — | [WP-003-accounts-secrets.md](./WP-003-accounts-secrets.md) |
 | WP-004 | Region selection harness | 0 | in-progress | — | [WP-004-region-selection.md](./WP-004-region-selection.md) |
 | WP-005 | Compliance kickoff (human+agent) | 0 | review | — | [WP-005-compliance-kickoff.md](./WP-005-compliance-kickoff.md) |
 | WP-006 | Brand & naming | 0 | in-progress | — | [WP-006-brand-naming.md](./WP-006-brand-naming.md) |
