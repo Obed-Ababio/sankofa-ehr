@@ -17,7 +17,7 @@ means the catalog specifies none.
 | WP-003 | Accounts & secrets base | 0 | todo | — | [WP-003-accounts-secrets.md](./WP-003-accounts-secrets.md) |
 | WP-004 | Region selection harness | 0 | in-progress | — | [WP-004-region-selection.md](./WP-004-region-selection.md) |
 | WP-005 | Compliance kickoff (human+agent) | 0 | review | — | [WP-005-compliance-kickoff.md](./WP-005-compliance-kickoff.md) |
-| WP-006 | Brand & naming | 0 | todo | — | [WP-006-brand-naming.md](./WP-006-brand-naming.md) |
+| WP-006 | Brand & naming | 0 | in-progress | — | [WP-006-brand-naming.md](./WP-006-brand-naming.md) |
 | WP-007 | Staging host | 0 | todo | WP-003 | [WP-007-staging-host.md](./WP-007-staging-host.md) |
 | WP-008 | CI/CD skeleton | 0 | todo | WP-001, WP-007 | [WP-008-cicd-skeleton.md](./WP-008-cicd-skeleton.md) |
 | WP-009 | Backups v0 | 0 | todo | WP-007 | [WP-009-backups-v0.md](./WP-009-backups-v0.md) |
