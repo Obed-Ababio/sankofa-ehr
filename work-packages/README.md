@@ -31,7 +31,7 @@ means the catalog specifies none.
 | WP-017 | Registration config | 1 | todo | WP-012, WP-013 | [WP-017-registration-config.md](./WP-017-registration-config.md) |
 | WP-018 | Triage/vitals | 1 | todo | WP-014 | [WP-018-triage-vitals.md](./WP-018-triage-vitals.md) |
 | WP-019 | OPD consult form | 1 | todo | WP-014, WP-016 | [WP-019-opd-consult-form.md](./WP-019-opd-consult-form.md) |
-| WP-020 | ghanaemr-core scaffold | 1 | todo | WP-001 | [WP-020-ghanaemr-core.md](./WP-020-ghanaemr-core.md) |
+| WP-020 | ghanaemr-core scaffold | 1 | review | WP-001 | [WP-020-ghanaemr-core.md](./WP-020-ghanaemr-core.md) |
 | WP-021 | Multi-clinic isolation | 1 | todo | WP-011, WP-020 | [WP-021-multi-clinic-isolation.md](./WP-021-multi-clinic-isolation.md) |
 | WP-022 | Cross-clinic network search + consent flow | 1 | todo | WP-017, WP-020, WP-021 | [WP-022-network-search-consent.md](./WP-022-network-search-consent.md) |
 | WP-023 | ANC forms | 1 | todo | WP-014 | [WP-023-anc-forms.md](./WP-023-anc-forms.md) |

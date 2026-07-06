@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    This Source Code Form is subject to the terms of the Mozilla Public License,
+    v. 2.0. If a copy of the MPL was not distributed with this file, You can
+    obtain one at http://mozilla.org/MPL/2.0/. This software is also distributed
+    under the terms of the Healthcare Disclaimer located at http://openmrs.org/license.
+-->
+
+<module configVersion="1.6">
+
+    <!-- Base Module Properties -->
+    <id>${project.parent.artifactId}</id>
+    <name>${project.parent.name}</name>
+    <version>${project.parent.version}</version>
+    <package>org.openmrs.module.ghanaemr</package>
+    <author>Sankofa EHR</author>
+    <description>
+        ${project.parent.description}
+    </description>
+
+    <activator>org.openmrs.module.ghanaemr.GhanaemrCoreActivator</activator>
+
+    <require_version>${openmrsPlatformVersion}</require_version>
+
+    <require_modules>
+        <require_module>org.openmrs.module.webservices.rest</require_module>
+    </require_modules>
+
+    <globalProperty>
+        <property>ghanaemr.ghanacard.checksum</property>
+        <defaultValue>off</defaultValue>
+        <description>Ghana Card check-digit (checksum) validation: "on" enables it once WP-012 implements the NIA algorithm; "off" (default) means format-only validation.</description>
+    </globalProperty>
+</module>
