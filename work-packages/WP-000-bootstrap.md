@@ -3,7 +3,7 @@
 | Field | Value |
 | --- | --- |
 | **Phase** | 0 — Weeks 1–2 |
-| **Status** | review |
+| **Status** | done |
 | **Depends on** | — |
 | **Estimate** | TBD — expand when picking up this WP |
 
@@ -24,7 +24,7 @@
 **Out of scope:** anything beyond skeleton (distro assembly is WP-010; CI beyond the validate job is WP-008).
 
 **Acceptance criteria:**
-- [ ] Repo builds; empty CI is green. *(workflow written; needs a GitHub remote to actually run — see log)*
+- [x] Repo builds; empty CI is green. *(2026-07-06: run 28820657151 on Obed-Ababio/sankofa-ehr — validate + backend jobs both success.)*
 
 **Test plan:** `.github/workflows/ci.yml` validate job (structure check, Zone.Identifier check, gitleaks secret scan) green on first push.
 
@@ -36,8 +36,4 @@
 
 **2026-07-05** — Local bootstrap complete: skeleton per §11, license (genuine MPL-2.0 + Healthcare Disclaimer text fetched from openmrs-core, project-specific tail), README, CHANGELOG, ADR template + index (ADR-001…009 pre-assigned per plan), all 71 WP tracker files generated from §13, issue/PR templates, CI validate workflow, master plan moved to `docs/`.
 
-**Human actions remaining (outward-facing, not agent-executable):**
-1. Create the GitHub org + public repo (plan names it `sankofa-ehr`; this working dir is `chronicles` — rename or set the remote name at push time).
-2. `git push` → confirm CI green (closes the AC).
-3. Create the private `sankofa-secrets` repo (WP-003).
-4. Update the security-advisories link in `.github/ISSUE_TEMPLATE/config.yml` with the real org/repo slug.
+**2026-07-06** — Pushed to **github.com/Obed-Ababio/sankofa-ehr** (public; founder chose personal account over an org for now — transferable later with URL redirects). First push surfaced a gitleaks-action edge case (event range uses root-commit^); replaced with a pinned full-history CLI scan. CI green (validate + backend). Security-advisories link updated to the real slug. Remaining elsewhere: private `sankofa-secrets` repo is WP-003's first task. **WP-000 done.**
