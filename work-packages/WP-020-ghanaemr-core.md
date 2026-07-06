@@ -31,8 +31,8 @@
 - Liquibase changesets, custom entities, DAOs (no persistence needed yet).
 
 **Acceptance criteria:**
-- [ ] Module loads on the platform. *(Verified by the orchestrator after this WP: deploy `omod/target/ghanaemr.core-1.0.0-SNAPSHOT.omod` on the stock 3.7.0 refapp from WP-001 and confirm startup log + ping.)*
-- [x] Sample REST ping resource works. *(`GET /ws/rest/v1/ghanaemr/ping` controller unit-tested; live check is part of the platform-load verification above.)*
+- [x] Module loads on the platform. *(Verified 2026-07-06 — see progress log.)*
+- [x] Sample REST ping resource works. *(Unit-tested and live-verified 2026-07-06 — see progress log.)*
 - [x] ≥80% coverage on service code from the start. *(JaCoCo gate at 0.80 line coverage on the api module fails the build if violated; currently 100% api, 100% omod.)*
 
 **Test plan:**
@@ -58,5 +58,5 @@
   - Activator with startup/shutdown logging; config-flags pattern via `GhanaemrConfig` (global properties + defaults, `ghanaemr.ghanacard.checksum` default `off`); §8 adapter layer (IdentityVerifier, InsuranceEligibility, SmsGateway, ClaimsSubmitter) with mocks and abstract contract tests; Ghana Card checksum left as WP-012 TODO (regex `^GHA-\d{9}-\d$` only).
   - Ping REST controller registered the queue-module way (component-scanned `@Controller` extending `BaseRestController`). Full REST-framework integration testing judged disproportionate for a scaffold: controller is unit-tested; live verification happens at deployment.
   - Build verified green in Docker (`maven:3.9-eclipse-temurin-17`, local JDK is 11): 46 tests pass, JaCoCo 100% line coverage (api 92/92 lines, omod 10/10), coverage gate met, `.omod` produced and inspected (filtered config.xml, api jar under `lib/`).
-  - **Remaining for orchestrator:** "module loads on platform" verification — deploy the omod on the WP-001 stock refapp (core 2.8.7 satisfies `require_version 2.7.9`) and hit `GET /ws/rest/v1/ghanaemr/ping`; then tick AC-1.
+  - **Platform-load verification (2026-07-06): PASSED.** Omod copied into the running stock 3.7.0 refapp (`/openmrs/data/modules/`), backend restarted (~1 min — restarts are fast; only first boot is slow). `GET /ws/rest/v1/module/ghanaemr.core?v=full` → `"started":true, "startupErrorMessage":null` on core 2.8.7; `GET /ws/rest/v1/ghanaemr/ping` → HTTP 200 `{"module":"ghanaemr.core","name":"Ghana EMR Core","version":"1.0.0-SNAPSHOT","status":"ok"}`. Minor: the activator's startup INFO line doesn't appear in container stdout — the stock RefApp log4j config doesn't include module logger categories; revisit logging config in WP-010/WP-045, not a module defect (REST `started:true` is the authoritative signal).
   - Sources consulted (all at `raw.githubusercontent.com/openmrs/openmrs-module-queue/queue-3.0.0/`): `pom.xml`, `api/pom.xml`, `omod/pom.xml`, `omod/src/main/resources/config.xml`, `omod/src/main/resources/webModuleApplicationContext.xml`, `api/src/main/resources/moduleApplicationContext.xml`, `api/src/main/java/.../QueueModuleActivator.java`, `omod/src/main/java/.../QueueEntryMetricRestController.java`, `omod/src/test/java/.../QueueEntryMetricRestControllerTest.java`; version pins from `docs/VERSIONS.md` (openmrs 2.7.9, webservices.rest 3.5.0).
