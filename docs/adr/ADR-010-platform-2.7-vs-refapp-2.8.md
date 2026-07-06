@@ -1,8 +1,8 @@
 # ADR-010 — Platform version: D1's 2.7.x vs RefApp 3.7.0's core 2.8.7
 
-- **Status:** proposed (draft — requires human sign-off; no code depends on the outcome yet)
-- **Date:** 2026-07-05
-- **Deciders:** founder (pending)
+- **Status:** accepted
+- **Date:** drafted 2026-07-05; accepted 2026-07-06
+- **Deciders:** Obed Ababio (founder)
 - **Relates to:** master plan §3 D1, §5, WP-001, WP-010
 
 ## Context
@@ -24,7 +24,7 @@ Staying on 2.7.9 means diverging from the exact assembly upstream ships and
 tests — the opposite of D2's "stay close to upstream" intent. Following the
 RefApp means platform 2.8.x, which technically contradicts D1's "2.7.x".
 
-## Decision (proposed)
+## Decision
 
 Track the platform version the current stable reference application ships
 (today: core 2.8.7 via RefApp 3.7.0), i.e. read D1 as "the platform version

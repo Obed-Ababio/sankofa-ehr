@@ -17,7 +17,7 @@ Numbering is fixed by the master plan where pre-assigned:
 | ADR-007 | OpenHIM adoption | WP-082 | pending |
 | ADR-008 | In-country hosting go/no-go | WP-084 | pending |
 | ADR-009 | Compose vs k3s | WP-086 | pending |
-| [ADR-010](ADR-010-platform-2.7-vs-refapp-2.8.md) | Platform version: D1's 2.7.x vs RefApp 3.7.0's core 2.8.7 | WP-001 | **proposed — needs sign-off** |
+| [ADR-010](ADR-010-platform-2.7-vs-refapp-2.8.md) | Platform version tracks the pinned stable RefApp release | WP-001 | **accepted 2026-07-06** |
 
 Use [`ADR-template.md`](ADR-template.md). Unnumbered decisions take the next
 free number ≥ 010.
