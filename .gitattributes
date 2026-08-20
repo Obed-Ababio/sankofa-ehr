@@ -1,0 +1,6 @@
+# Normalize to LF everywhere — the team works across macOS and WSL2,
+# and shell scripts/compose files break with CRLF.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jar binary

@@ -17,6 +17,21 @@ Add the compose plugin dir to `~/.docker/config.json` (brew prints this caveat):
 
 Maven needs the Ozone repository in `~/.m2/settings.xml` — copy the profile from [`infra/maven-settings-example.xml`](../infra/maven-settings-example.xml) and activate it.
 
+## Prerequisites (Windows desktop — WSL2)
+
+Do **everything inside the WSL2 distro** (Ubuntu). Never clone to a Windows path (`/mnt/c/...`) — the repo uses a symlink (`configuration/`) and LF line endings, and Docker bind-mount performance on `/mnt/c` is terrible.
+
+```sh
+# inside WSL2 Ubuntu
+sudo apt update && sudo apt install -y docker.io docker-compose-v2 maven openjdk-17-jdk make git curl
+sudo usermod -aG docker $USER   # then close and reopen the terminal
+git clone <repo-url> ~/src/sankofa-ehr
+```
+
+(Alternatively Docker Desktop for Windows with the WSL2 backend works too — skip `docker.io` if you use it.)
+
+Then add the Ozone Maven profile exactly as below.
+
 Linux: install Docker Engine + compose plugin + Maven from your distro; skip Colima.
 
 ## Run it

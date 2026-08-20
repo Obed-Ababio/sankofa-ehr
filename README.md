@@ -3,6 +3,7 @@
 Multi-clinic EMR for Ghanaian private clinics, built on OpenMRS 3 via the Ozone FOSS distro tooling. Clinics first, hospital tier later.
 
 Master plan: [docs/ghana-clinic-emr-implementation-plan.md](docs/ghana-clinic-emr-implementation-plan.md)
+**Current status & next steps: [docs/progress.md](docs/progress.md)** — read this first when resuming work.
 
 ## Quick start
 
