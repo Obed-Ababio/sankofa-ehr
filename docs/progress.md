@@ -25,7 +25,7 @@ Status of the [master plan](ghana-clinic-emr-implementation-plan.md), updated at
 | 1.4 Registration form config | ⬜ |
 | 1.5 Duplicate guard + SOP | ⬜ |
 | 1.6 Roles & users (Front Desk, Clinician, Clinic Admin, Support) | ⬜ |
-| 1.7 Locations | ⬜ |
+| 1.7 Locations | ✅ Done (2026-08-21) — org → branch → rooms per ADR-0003; demo sites retired |
 | 1.8 Seed & performance tool (5,000 patients) | ⬜ |
 | 1.9 Playwright specs in CI | ⬜ |
 
@@ -34,6 +34,11 @@ Pending decisions/inputs:
 - Cloud provider for staging VM (deferred with 0.4 to pre-launch)
 
 ## Session log
+
+### 2026-08-21 (later) — Tenancy decision + task 1.7 (laptop)
+- ADR-0003: tenancy is organization-scoped — one instance per organization, branches as Locations, patients org-wide; cross-organization sharing deferred to the HIE layer over FHIR (founder direction: cross-org is the eventual goal).
+- Locations config: Sankofa Medical Centre → Accra Branch → Registration/Triage/Consultation 1-2 (Login+Queue tags); all 114 demo locations (Site 1-46, Wards, etc.) retired by UUID.
+- e2e helpers log in at Registration; smoke spec deduplicated through helpers.ts.
 
 ### 2026-08-21 — Identifier research + task 1.1 (laptop)
 - `docs/research/patient-identifiers.md`: Ghana ID landscape (verified: Ghana Card mandatory-but-not-exclusive, NHIS↔Ghana Card linkage via *929#, NCA phone format/MNP) + EMR identifier best practice; recommendation table for 1.1.

@@ -13,7 +13,7 @@ export async function logIn(page: Page, username = 'admin', password = 'Admin123
   // select → confirm → navigate sequence until we actually land on /home.
   await expect(async () => {
     if (page.url().includes('/login/location')) {
-      await page.getByRole('radio', { name: 'Outpatient Clinic' }).check({ force: true });
+      await page.getByRole('radio', { name: 'Registration' }).check({ force: true });
       const confirm = page.getByRole('button', { name: /confirm/i });
       await expect(confirm).toBeEnabled({ timeout: 3_000 });
       await confirm.click();
