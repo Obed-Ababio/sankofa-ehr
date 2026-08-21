@@ -20,7 +20,7 @@ Status of the [master plan](ghana-clinic-emr-implementation-plan.md), updated at
 | Task | Status |
 |---|---|
 | 1.1 Identifier types (Ghana Card, NHIS, folder number + ID-Gen, legacy) | ✅ Done (2026-08-21) — NHIS 8-digit format still provisional pending a physical card |
-| 1.2 Person attributes (phones, emergency contact, occupation) | ⬜ |
+| 1.2 Person attributes (phones, emergency contact, occupation) | ✅ Done (2026-08-21) — regex enforcement lands with 1.4 form config |
 | 1.3 Address hierarchy (16 regions / 261 MMDAs) | ⬜ |
 | 1.4 Registration form config | ⬜ |
 | 1.5 Duplicate guard + SOP | ⬜ |
@@ -39,6 +39,7 @@ Pending decisions/inputs:
 - ADR-0003: tenancy is organization-scoped — one instance per organization, branches as Locations, patients org-wide; cross-organization sharing deferred to the HIE layer over FHIR (founder direction: cross-org is the eventual goal).
 - Locations config: Sankofa Medical Centre → Accra Branch → Registration/Triage/Consultation 1-2 (Login+Queue tags); all 114 demo locations (Site 1-46, Wards, etc.) retired by UUID.
 - e2e helpers log in at Registration; smoke spec deduplicated through helpers.ts.
+- 1.2 person attributes: Telephone Number made searchable; added Alternate phone, Emergency contact name/phone, Occupation. Phone regex (`^0[235]\d{8}$`, NCA-derived) enforced at the form layer in 1.4.
 
 ### 2026-08-21 — Identifier research + task 1.1 (laptop)
 - `docs/research/patient-identifiers.md`: Ghana ID landscape (verified: Ghana Card mandatory-but-not-exclusive, NHIS↔Ghana Card linkage via *929#, NCA phone format/MNP) + EMR identifier best practice; recommendation table for 1.1.

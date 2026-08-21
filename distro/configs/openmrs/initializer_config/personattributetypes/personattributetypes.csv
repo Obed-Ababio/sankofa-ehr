@@ -1,0 +1,6 @@
+Uuid,Void/Retire,Name,Description,Format,Searchable
+14d4f066-15f5-102d-96e4-000c29c2a5d7,,Telephone Number,Primary phone number. Format 0XXXXXXXXX (NCA: mobile 02x/05x or fixed 03x); regex enforced by the registration form config. Search key - never a unique identifier (numbers are shared and recycled).,java.lang.String,TRUE
+465677d1-a32d-4873-a220-879e10d61767,,Alternate phone number,Second phone number (spouse or other household member is common). Same format rules as Telephone Number.,java.lang.String,TRUE
+a28bada2-4124-4913-a3fc-fe9150207515,,Emergency contact name,Name of next of kin / emergency contact.,java.lang.String,FALSE
+56e54d5b-2073-4c1b-aeec-0251b9d58c8d,,Emergency contact phone,Phone number of the emergency contact. Same format rules as Telephone Number.,java.lang.String,FALSE
+af98ef39-9790-4a99-99d4-6df9d45d2b74,,Occupation,Patient occupation (free text at MVP; needed for the GHS OPD register).,java.lang.String,FALSE
