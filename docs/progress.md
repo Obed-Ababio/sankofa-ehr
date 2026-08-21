@@ -9,15 +9,29 @@ Status of the [master plan](ghana-clinic-emr-implementation-plan.md), updated at
 | 0.1 Scaffold EMR-only Ozone distro | ✅ Done (2026-08-19) |
 | 0.2 `make dev` local dev experience + `docs/dev-setup.md` | ✅ Done (2026-08-19) |
 | 0.3 CI (GitHub Actions: build, smoke e2e, publish artifact) | ✅ Done (2026-08-20) — publishes distro zip, not image (ADR-0002) |
-| 0.4 Staging VM (in-country, provisioned by playbook) | ⬜ **Next up** — blocked on cloud provider choice |
+| 0.4 Staging VM (in-country, provisioned by playbook) | ⏸ **Deferred to pre-launch** (founder decision 2026-08-21) — build/verify all patient & provider workflows locally + CI first; stand up staging before clinician UAT / pilot prep |
 | 0.5 Conventions doc | ✅ Done (2026-08-19) |
 | 0.6 Non-code: DPC registration, OpenMRS Talk/Slack intro | ⬜ Founder action |
 
-**Test Gate 0:** not yet attempted — needs 0.3 + 0.4. Local equivalents verified: one-command boot, clean `destroy → dev` rebuild, empty DB, EMR-only container set.
+**Test Gate 0:** passed in local+CI form (one-command boot, clean `destroy → dev` rebuild, empty DB, EMR-only container set, CI green with smoke e2e). Staging-dependent items (gate 1 & 3) move to the pre-launch checklist with task 0.4.
+
+## Stage 1 — Ghana patient registry ← **current stage**
+
+| Task | Status |
+|---|---|
+| 1.1 Identifier types (Ghana Card, NHIS, folder number + ID-Gen, legacy) | ⬜ **Next up** |
+| 1.2 Person attributes (phones, emergency contact, occupation) | ⬜ |
+| 1.3 Address hierarchy (16 regions / 261 MMDAs) | ⬜ |
+| 1.4 Registration form config | ⬜ |
+| 1.5 Duplicate guard + SOP | ⬜ |
+| 1.6 Roles & users (Front Desk, Clinician, Clinic Admin, Support) | ⬜ |
+| 1.7 Locations | ⬜ |
+| 1.8 Seed & performance tool (5,000 patients) | ⬜ |
+| 1.9 Playwright specs in CI | ⬜ |
 
 Pending decisions/inputs:
-- Cloud provider for staging VM (unblocks 0.4)
-- Verify NHIS number format on a current NHIA card (needed before Stage 1 task 1.1)
+- Verify NHIS number format on a current NHIA card (needed before locking 1.1 validation)
+- Cloud provider for staging VM (deferred with 0.4 to pre-launch)
 
 ## Session log
 
