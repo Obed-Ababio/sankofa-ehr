@@ -4,17 +4,16 @@ RUN_SCRIPTS    := $(DISTRO_TARGET)/run/docker/scripts
 
 .PHONY: dev build start stop destroy logs ps
 
-## dev: build the distro (if needed) and start the full stack
-dev: $(RUN_SCRIPTS)/start.sh start
+## dev: rebuild the distro and start the full stack. Always rebuilds —
+## a stale target/ silently serves old config, which costs far more than
+## the few seconds a cached build takes.
+dev: build start
 
 ## build: force a full rebuild of the distro.
 ## NOTE: `clean` deletes target/, which the running containers bind-mount —
 ## after building while the stack is up, restart containers so mounts
 ## re-resolve: docker restart ozone-openmrs-1 ozone-frontend-1
 build:
-	cd distro/scripts && ./mvnw -f ../pom.xml clean package
-
-$(RUN_SCRIPTS)/start.sh:
 	cd distro/scripts && ./mvnw -f ../pom.xml clean package
 
 start:

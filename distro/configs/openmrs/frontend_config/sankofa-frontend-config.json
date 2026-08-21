@@ -1,0 +1,83 @@
+{
+  "@openmrs/esm-primary-navigation-app": {
+    "externalRefLinks": []
+  },
+  "@openmrs/esm-patient-registration-app": {
+    "sections": ["demographics", "contact", "relationships"],
+    "sectionDefinitions": [
+      {
+        "id": "contact",
+        "name": "Contact Details",
+        "fields": [
+          "address",
+          "phone",
+          "altPhone",
+          "emergencyContactName",
+          "emergencyContactPhone",
+          "occupation"
+        ]
+      }
+    ],
+    "fieldDefinitions": [
+      {
+        "id": "altPhone",
+        "type": "person attribute",
+        "uuid": "465677d1-a32d-4873-a220-879e10d61767",
+        "label": "Alternate phone number",
+        "placeholder": "0XXXXXXXXX",
+        "showHeading": false,
+        "validation": { "required": false, "matches": "^0[235]\\d{8}$" }
+      },
+      {
+        "id": "emergencyContactName",
+        "type": "person attribute",
+        "uuid": "a28bada2-4124-4913-a3fc-fe9150207515",
+        "label": "Emergency contact name",
+        "showHeading": false,
+        "validation": { "required": false }
+      },
+      {
+        "id": "emergencyContactPhone",
+        "type": "person attribute",
+        "uuid": "56e54d5b-2073-4c1b-aeec-0251b9d58c8d",
+        "label": "Emergency contact phone",
+        "placeholder": "0XXXXXXXXX",
+        "showHeading": false,
+        "validation": { "required": false, "matches": "^0[235]\\d{8}$" }
+      },
+      {
+        "id": "occupation",
+        "type": "person attribute",
+        "uuid": "af98ef39-9790-4a99-99d4-6df9d45d2b74",
+        "label": "Occupation",
+        "showHeading": false,
+        "validation": { "required": false }
+      }
+    ],
+    "fieldConfigurations": {
+      "name": {
+        "displayCapturePhoto": false,
+        "allowUnidentifiedPatients": true
+      },
+      "phone": {
+        "personAttributeUuid": "14d4f066-15f5-102d-96e4-000c29c2a5d7",
+        "validation": { "required": false, "matches": "^0[235]\\d{8}$" }
+      },
+      "address": {
+        "useAddressHierarchy": {
+          "enabled": true,
+          "useQuickSearch": false,
+          "searchAddressByLevel": true
+        }
+      },
+      "dateOfBirth": {
+        "allowEstimatedDateOfBirth": true
+      }
+    },
+    "defaultPatientIdentifierTypes": [
+      "ff994ca9-8813-4dfb-98b2-ab7b32064885",
+      "1b7af0ba-9ac0-48d4-a54d-cd6a84752fa3",
+      "615b6816-3075-4954-85d0-a3d6d4f68b36"
+    ]
+  }
+}

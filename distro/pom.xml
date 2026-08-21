@@ -22,6 +22,40 @@
     <!-- TODO: Add any implementation-specific dependencies -->
   </dependencies>
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <!-- The parent copies only docker-compose-files.txt and
+               start-ozone.sh from scripts/; our compose override file
+               must land next to the other compose files in run/docker. -->
+          <execution>
+            <id>Copy docker-compose-override.yml</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>
+                ${project.build.directory}/${project.artifactId}-${project.version}/run/docker</outputDirectory>
+              <overwrite>true</overwrite>
+              <resources>
+                <resource>
+                  <directory>${project.basedir}/scripts</directory>
+                  <includes>
+                    <include>docker-compose-override.yml</include>
+                  </includes>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
   <profiles>
     <profile>
       <id>validator</id>

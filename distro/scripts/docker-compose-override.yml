@@ -1,0 +1,7 @@
+# Sankofa overrides on top of the stock Ozone compose files.
+# Listed last in docker-compose-files.txt so it wins.
+services:
+  frontend:
+    environment:
+      # Load our config after the base Ozone config so our keys override.
+      SPA_CONFIG_URLS: /openmrs/spa/ozone/ozone-frontend-config.json,/openmrs/spa/ozone/sankofa-frontend-config.json
