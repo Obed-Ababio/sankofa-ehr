@@ -8,19 +8,24 @@ Status of the [master plan](ghana-clinic-emr-implementation-plan.md), updated at
 |---|---|
 | 0.1 Scaffold EMR-only Ozone distro | ✅ Done (2026-08-19) |
 | 0.2 `make dev` local dev experience + `docs/dev-setup.md` | ✅ Done (2026-08-19) |
-| 0.3 CI (GitHub Actions: build, smoke e2e, publish image) | ⬜ **Next up** — blocked on GitHub repo |
-| 0.4 Staging VM (in-country, provisioned by playbook) | ⬜ Blocked on cloud provider choice |
+| 0.3 CI (GitHub Actions: build, smoke e2e, publish artifact) | ✅ Done (2026-08-20) — publishes distro zip, not image (ADR-0002) |
+| 0.4 Staging VM (in-country, provisioned by playbook) | ⬜ **Next up** — blocked on cloud provider choice |
 | 0.5 Conventions doc | ✅ Done (2026-08-19) |
 | 0.6 Non-code: DPC registration, OpenMRS Talk/Slack intro | ⬜ Founder action |
 
 **Test Gate 0:** not yet attempted — needs 0.3 + 0.4. Local equivalents verified: one-command boot, clean `destroy → dev` rebuild, empty DB, EMR-only container set.
 
 Pending decisions/inputs:
-- GitHub org/repo name (unblocks 0.3)
 - Cloud provider for staging VM (unblocks 0.4)
 - Verify NHIS number format on a current NHIA card (needed before Stage 1 task 1.1)
 
 ## Session log
+
+### 2026-08-20 — CI (laptop)
+- Remote established at `github.com/Obed-Ababio/sankofa-ehr` (old repo history replaced; pre-Ozone iteration preserved as local tag `archive/pre-ozone-remote` on the laptop).
+- `e2e/` Playwright project: smoke spec logs in as admin, handles the location picker, asserts the home dashboard. Runs locally (`cd e2e && npx playwright test`) and in CI.
+- `.github/workflows/ci.yml`: hygiene job (Zone.Identifier check, gitleaks full-history secret scan) + build job (build distro → boot stack → wait for health → smoke e2e → assert EMR-only services → upload distro zip from main).
+- ADR-0002: deployable artifact is the distro zip, not a container image.
 
 ### 2026-08-19 — Stage 0 kickoff (laptop)
 - Repo initialized; monorepo layout per plan §1; Ozone distro scaffolded from `com.ozonehis:maven-archetype` (parent `1.0.0-alpha.10`, O3 `3.0.0-beta.18`).

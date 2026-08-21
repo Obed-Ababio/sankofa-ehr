@@ -1,0 +1,91 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  hygiene:
+    name: Hygiene & secret scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: No Windows Zone.Identifier artifacts
+        run: |
+          ! find . -path ./.git -prune -o -name '*Zone.Identifier*' -print | grep . \
+            || { echo "Zone.Identifier files committed"; exit 1; }
+
+      # Full-history scan via the gitleaks CLI. (gitleaks-action@v2 derives a
+      # commit range from the push event, which breaks on the repo's first
+      # push: <root-commit>^ does not exist.)
+      - name: Secret scan (gitleaks)
+        run: |
+          docker run --rm -v "$PWD:/repo" ghcr.io/gitleaks/gitleaks:v8.30.1 \
+            git /repo --no-banner --redact --exit-code 1
+
+  build-and-smoke:
+    name: Build distro, boot stack, smoke e2e
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+
+      - name: Configure Maven for Ozone nexus
+        run: mkdir -p ~/.m2 && cp infra/maven-settings-example.xml ~/.m2/settings.xml
+
+      - name: Build distro
+        run: cd distro/scripts && ./mvnw -f ../pom.xml -B clean package
+
+      - name: Start EMR stack
+        run: cd distro/target/sankofa-emr-1.0.0-SNAPSHOT/run/docker/scripts && ./start.sh
+
+      - name: Wait for OpenMRS to start
+        run: |
+          timeout 600 bash -c \
+            'until curl -sf -o /dev/null http://localhost/openmrs/health/started; do sleep 10; done'
+          curl -sf -o /dev/null http://localhost/openmrs/spa/login
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: e2e/package-lock.json
+
+      - name: Install Playwright
+        working-directory: e2e
+        run: npm ci && npx playwright install --with-deps chromium
+
+      - name: Smoke e2e (login → dashboard)
+        working-directory: e2e
+        run: npx playwright test
+
+      - name: Sanity — only EMR services running
+        run: |
+          docker compose -p ozone ps --format '{{.Name}}' | tee running.txt
+          ! grep -Ei 'odoo|senaite|superset|keycloak|erpnext' running.txt
+
+      - name: Upload Playwright report on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: e2e/playwright-report/
+          retention-days: 7
+
+      # The deployable unit is the distro zip (see ADR-0002); publish it from main.
+      - name: Publish distro artifact (main only)
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: actions/upload-artifact@v4
+        with:
+          name: sankofa-emr-${{ github.sha }}
+          path: distro/target/sankofa-emr-*.zip
+          retention-days: 30
