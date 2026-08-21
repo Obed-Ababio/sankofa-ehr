@@ -21,7 +21,7 @@ Status of the [master plan](ghana-clinic-emr-implementation-plan.md), updated at
 |---|---|
 | 1.1 Identifier types (Ghana Card, NHIS, folder number + ID-Gen, legacy) | ✅ Done (2026-08-21) — NHIS 8-digit format still provisional pending a physical card |
 | 1.2 Person attributes (phones, emergency contact, occupation) | ✅ Done (2026-08-21) — regex enforcement lands with 1.4 form config |
-| 1.3 Address hierarchy (16 regions / 261 MMDAs) | ⬜ |
+| 1.3 Address hierarchy (16 regions / 261 MMDAs) | ✅ Done (2026-08-21) — validator in CI asserts 16/261 |
 | 1.4 Registration form config | ⬜ |
 | 1.5 Duplicate guard + SOP | ⬜ |
 | 1.6 Roles & users (Front Desk, Clinician, Clinic Admin, Support) | ⬜ |
@@ -39,6 +39,7 @@ Pending decisions/inputs:
 - ADR-0003: tenancy is organization-scoped — one instance per organization, branches as Locations, patients org-wide; cross-organization sharing deferred to the HIE layer over FHIR (founder direction: cross-org is the eventual goal).
 - Locations config: Sankofa Medical Centre → Accra Branch → Registration/Triage/Consultation 1-2 (Login+Queue tags); all 114 demo locations (Site 1-46, Wards, etc.) retired by UUID.
 - e2e helpers log in at Registration; smoke spec deduplicated through helpers.ts.
+- 1.3 address hierarchy: Ghana → 16 regions → 261 MMDAs loaded via Address Hierarchy module (GSS-derived dataset, cleaned: Juaboso dupe dropped, Eastern renamed); Town stays free text; `tools/validate-address-hierarchy.py` asserts 16/261 in CI.
 - 1.2 person attributes: Telephone Number made searchable; added Alternate phone, Emergency contact name/phone, Occupation. Phone regex (`^0[235]\d{8}$`, NCA-derived) enforced at the form layer in 1.4.
 
 ### 2026-08-21 — Identifier research + task 1.1 (laptop)

@@ -19,6 +19,9 @@ jobs:
           ! find . -path ./.git -prune -o -name '*Zone.Identifier*' -print | grep . \
             || { echo "Zone.Identifier files committed"; exit 1; }
 
+      - name: Validate Ghana address hierarchy (16 regions / 261 MMDAs)
+        run: python3 tools/validate-address-hierarchy.py
+
       # Full-history scan via the gitleaks CLI. (gitleaks-action@v2 derives a
       # commit range from the push event, which breaks on the repo's first
       # push: <root-commit>^ does not exist.)
