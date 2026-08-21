@@ -25,7 +25,7 @@ Legal status (verified 3-0 against [NIA's FAQ](https://nia.gov.gh/faqs/)): the G
 
 | Identifier | Validation | Required | Unique | Generation | Notes |
 |---|---|---|---|---|---|
-| **Clinic folder number** (primary MRN) | `^[A-Z]{3}-\d{6}-[0-9ACDEFGHJKLMNPRTUVWXY]$` | **Yes** | Yes | Idgen `SequentialIdentifierGenerator`: per-clinic 3-letter prefix + zero-padded 6-digit sequence; **LuhnMod30 validator** on the type appends/validates check char | System-assigned canonical ID per OpenHIE. 6 digits = 1M patients/clinic headroom |
+| **Clinic folder number** (primary MRN) | `^[ACDEFGHJKLMNPRTUVWXY]{3}\d{6}[0-9ACDEFGHJKLMNPRTUVWXY]$` | **Yes** | Yes | Idgen `SequentialIdentifierGenerator`: per-clinic 3-letter prefix + zero-padded 6-digit sequence; **LuhnMod30 validator** on the type appends/validates check char | System-assigned canonical ID per OpenHIE. 6 digits = 1M patients/clinic headroom. *Implementation notes:* generated hyphenless (observed: `ACC0000015`); prefix letters must come from the Mod-30 alphabet (no B I O Q S Z) or generation throws |
 | **Ghana Card PIN** | `^[A-Z]{3}-\d{9}-\d$` | No | Yes | Manual entry | Widened from `GHA`-only to admit non-citizen residents. Format-only (no public checksum). Optional + consent flag (Act 843) |
 | **NHIS membership no.** | `^\d{8}$` *(provisional)* | No | Yes | Manual entry | ⚠️ digit count unverified — **check a physical card**; note patients may present a linked Ghana Card instead |
 | **Legacy folder no.** | none (free text) | No | No | Manual (Stage 4 importer) | Keeps paper folders findable |

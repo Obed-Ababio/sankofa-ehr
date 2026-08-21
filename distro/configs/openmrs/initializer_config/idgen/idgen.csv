@@ -1,0 +1,2 @@
+Uuid,Void/Retire,Name,Description,Identifier type,Base character set,First identifier base,Prefix,Suffix,Min length,Max length
+305c9d92-51d0-49dd-8697-17ca15f4a35b,,Clinic folder number source,Sequential generator for the primary clinic MRN. Prefix is per-clinic (Mod-30 alphabet only - no B I O Q S Z); dev default ACC.,8e9059db-dc0c-4a87-8dd6-f018f1ca085d,0123456789,000001,ACC,,,

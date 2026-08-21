@@ -50,4 +50,5 @@ make destroy  # stop and DELETE all data/volumes (DB is disposable pre-pilot)
 - **`docker: command not found` inside make** — ensure `colima status` says Running and `docker context ls` shows `colima` selected.
 - **amd64-only image warnings on Apple Silicon** — noted per-image in `distro/`; if a container crash-loops with exec format errors, check its `platform:` override.
 - **Port already in use** — the stack binds port 80/8080 on localhost; stop whatever holds it or edit the proxy port in `distro/`.
+- **404s from the SPA after `make build`** — `clean` deletes `target/`, which running containers bind-mount; the old mount points at a deleted inode. `docker restart ozone-openmrs-1 ozone-frontend-1` re-resolves the mounts. (Restarting the backend is also how changed `configuration/` files get reloaded — Initializer re-reads changed-checksum files at startup.)
 - **Wiping a broken environment** — `make destroy && make dev` rebuilds from scratch; all metadata comes from `configuration/`, so nothing of value lives in the local DB.

@@ -19,7 +19,7 @@ Status of the [master plan](ghana-clinic-emr-implementation-plan.md), updated at
 
 | Task | Status |
 |---|---|
-| 1.1 Identifier types (Ghana Card, NHIS, folder number + ID-Gen, legacy) | ⬜ **Next up** |
+| 1.1 Identifier types (Ghana Card, NHIS, folder number + ID-Gen, legacy) | ✅ Done (2026-08-21) — NHIS 8-digit format still provisional pending a physical card |
 | 1.2 Person attributes (phones, emergency contact, occupation) | ⬜ |
 | 1.3 Address hierarchy (16 regions / 261 MMDAs) | ⬜ |
 | 1.4 Registration form config | ⬜ |
@@ -34,6 +34,13 @@ Pending decisions/inputs:
 - Cloud provider for staging VM (deferred with 0.4 to pre-launch)
 
 ## Session log
+
+### 2026-08-21 — Identifier research + task 1.1 (laptop)
+- `docs/research/patient-identifiers.md`: Ghana ID landscape (verified: Ghana Card mandatory-but-not-exclusive, NHIS↔Ghana Card linkage via *929#, NCA phone format/MNP) + EMR identifier best practice; recommendation table for 1.1.
+- Key deviation from master plan: Ghana Card regex widened to `^[A-Z]{3}-\d{9}-\d$` (ICAO nationality prefixes — non-citizens' cards aren't `GHA-`).
+- Implemented 1.1 as Initializer config: 4 identifier types + Idgen sequential source (prefix `ACC`, Mod-30 alphabet only — no B I O Q S Z, or generation throws) + autogeneration (auto on, manual off). Generated format is hyphenless: `ACC0000015`.
+- Verified end-to-end: registration UI auto-generates valid folder numbers (new `registration.spec.ts`); malformed Ghana Card/NHIS rejected via REST; folder number enforced as required.
+- Gotcha documented: `make build` deletes `target/` under running containers' bind mounts → restart openmrs+frontend after building.
 
 ### 2026-08-20 — CI (laptop)
 - Remote established at `github.com/Obed-Ababio/sankofa-ehr` (old repo history replaced; pre-Ozone iteration preserved as local tag `archive/pre-ozone-remote` on the laptop).
