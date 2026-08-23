@@ -23,8 +23,8 @@ Status of the [master plan](ghana-clinic-emr-implementation-plan.md), updated at
 | 1.2 Person attributes (phones, emergency contact, occupation) | ✅ Done (2026-08-21) — regex enforcement lands with 1.4 form config |
 | 1.3 Address hierarchy (16 regions / 261 MMDAs) | ✅ Done (2026-08-21) — validator in CI asserts 16/261 |
 | 1.4 Registration form config | ✅ Done (2026-08-21) — Ghana Card/NHIS/legacy pinned, phone regex, estimated age, cascading address |
-| 1.5 Duplicate guard + SOP | ⬜ |
-| 1.6 Roles & users (Front Desk, Clinician, Clinic Admin, Support) | ⬜ |
+| 1.5 Duplicate guard + SOP | ✅ Done (2026-08-22) — SOP + uniqueness; no similar-patient feature in reg app 6.1.0, no matching engine per plan |
+| 1.6 Roles & users (Front Desk, Clinician, Clinic Admin, Support) | ✅ Done (2026-08-22) — REST-level isolation verified; FHIR privilege gap documented for Stage 3 |
 | 1.7 Locations | ✅ Done (2026-08-21) — org → branch → rooms per ADR-0003; demo sites retired |
 | 1.8 Seed & performance tool (5,000 patients) | ⬜ |
 | 1.9 Playwright specs in CI | ⬜ |
@@ -34,6 +34,12 @@ Pending decisions/inputs:
 - Cloud provider for staging VM (deferred with 0.4 to pre-launch)
 
 ## Session log
+
+### 2026-08-22 — Tasks 1.5 + 1.6 (laptop)
+- 1.5: front-desk search-before-create SOP (`docs/sop/front-desk-registration.md`); registration app 6.1.0 has no similar-patient feature — guard = SOP + identifier uniqueness (no matching engine, per plan).
+- 1.6: four Sankofa roles in `configuration/roles/roles.csv`. Stock refapp roles all inherit Privilege Level: High (cosmetic separation!) — Front Desk instead carries a computed 132-privilege list (High minus clinical data minus Manage). Privilege matrix: `docs/security/roles.md`. Dev users via `tools/create-dev-users.sh`; e2e proves frontdesk registers+searches but gets 403 on encounters/obs while clinician gets 200.
+- **Security finding:** fhir2 module does not enforce privileges — front desk can read Observations via FHIR R4 (confirmed with seeded vitals). REST (what the UI widgets use for clinical data) is enforced. Documented in roles.md, `test.fixme` marker in suite, hardening decision deferred to Stage 3 (module upgrade / upstream PR / proxy rule).
+- Gotchas: role description column max 255 chars; watch persistent shell cwd (a stray `e2e/configuration/` from a mis-cwd'd mkdir).
 
 ### 2026-08-21 (later) — Tenancy decision + task 1.7 (laptop)
 - ADR-0003: tenancy is organization-scoped — one instance per organization, branches as Locations, patients org-wide; cross-organization sharing deferred to the HIE layer over FHIR (founder direction: cross-org is the eventual goal).
