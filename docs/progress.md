@@ -40,8 +40,8 @@ Pending decisions/inputs:
 | Task | Status |
 |---|---|
 | 2.1 Concept dictionary + Ghana OPD diagnosis value set | 🔶 Draft ready (2026-08-22) — 155-entry CIEL-resolved draft awaiting **clinician sign-off** (`docs/clinical/ghana-opd-value-set.md`); load blocked on sign-off + founder's OCL account |
-| 2.2 OPD visit type | ⬜ |
-| 2.3 Vitals & biometrics | ⬜ |
+| 2.2 OPD visit type | ✅ Done (2026-08-22) — OPD Visit is the only active visit type (others retired via Initializer); start/stop proven on the chart by e2e |
+| 2.3 Vitals & biometrics | ✅ Done (2026-08-22) — standard O3 vitals app; ranges verified, temperature thresholds added (36–37.4 normal, 35/40 critical — **clinician to confirm** with value set); BMI auto-computes |
 | 2.4 Consultation form | ⬜ |
 | 2.5 Medications (NHIS list) | ⬜ |
 | 2.6 Prescription printing | ⬜ |
@@ -55,6 +55,12 @@ Pending decisions/inputs for 2.1:
 - Upstream: CIEL 122604 (cholera) lacks an ICD-10 map; CIEL 86 (motor vehicle accident) carries a wrong map (N25.8) — report both to CIEL once we have the OCL/Talk account
 
 ## Session log
+
+### 2026-08-22 (Stage 2, later) — Tasks 2.2 + 2.3 (laptop)
+- 2.2: `configuration/visittypes/visittypes-sankofa.csv` keeps OPD Visit (base O3 uuid `287463d3…`) and retires Facility/Home/Offline/Group Session, so the start-visit form offers exactly one type. Base visit types come from Ozone's `visittypes-core_data.csv`; our overlay file sorts after it, so Initializer applies the retirements last.
+- 2.3: vitals concepts (CIEL 5085-5092 uuids) already carry sensible ranges from the O3 starter set **except temperature — no normal/critical thresholds, so fever never flagged**. Added `configuration/concepts/concepts-sankofa_vitals_ranges.csv` (full concept row for CIEL 5088; partial rows would blank other fields): 36–37.4 normal, 35/40 critical, 25/43 absolute. Standard adult defaults — clinician to confirm alongside the value set.
+- e2e `opd-visit.spec.ts`: register → start OPD visit (asserts it's the only type) → record 8 vitals incl. temp 38.5 → REST-assert obs + ranges → end visit → REST-assert single closed OPD visit. Plus a REST spec pinning the active visit-type list.
+- O3 UI gotchas hit: the patient-banner mega-button's accessible name contains "Actions" (use `exact: true`); the siderail trigger and form submit share the name "Start a visit"; the visit header has its own "End visit" button and the confirm modal's button has the same name (scope to the dialog); "Record vitals"/"Record vital signs" both exist on an empty chart.
 
 ### 2026-08-22 (Stage 2 kickoff) — Task 2.1 draft value set (laptop)
 - Ghana OPD diagnosis value set drafted: 155 diagnoses across 20 categories (GHS top OPD causes + plan §4 list), every entry resolved to a live CIEL concept with its ICD-10-WHO mapping captured. Deliverables: `docs/clinical/ghana-opd-value-set.md` (clinician review doc with sign-off block + 7 open questions) and `ghana-opd-diagnoses-draft.csv` (machine-readable, source of truth).
