@@ -15,7 +15,9 @@ Status of the [master plan](ghana-clinic-emr-implementation-plan.md), updated at
 
 **Test Gate 0:** passed in local+CI form (one-command boot, clean `destroy → dev` rebuild, empty DB, EMR-only container set, CI green with smoke e2e). Staging-dependent items (gate 1 & 3) move to the pre-launch checklist with task 0.4.
 
-## Stage 1 — Ghana patient registry ← **current stage**
+## Stage 1 — Ghana patient registry — ✅ CLOSED in local+CI form (2026-08-22, `v0.1`)
+
+Gate checklist: [gates/gate-1-patient-registry.md](gates/gate-1-patient-registry.md). Staging-dependent items (gate #1 UAT) deferred to pre-launch. **Next stage: Stage 2 — OPD clinical workflow** (first task 2.1: OCL/CIEL concept dictionary + Ghana OPD diagnosis value set — needs clinician sign-off).
 
 | Task | Status |
 |---|---|
