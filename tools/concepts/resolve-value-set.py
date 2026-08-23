@@ -148,7 +148,7 @@ def cmd_resolve(args):
                 seen[r["ciel_id"]] = r["term"]
 
     with open(args.out, "w", newline="") as f:
-        w = csv.DictWriter(f, FIELDS)
+        w = csv.DictWriter(f, FIELDS, lineterminator="\n")
         w.writeheader()
         w.writerows(rows)
     n = {s: sum(1 for r in rows if r["status"] == s) for s in ("exact", "review", "not-found", "error")}
