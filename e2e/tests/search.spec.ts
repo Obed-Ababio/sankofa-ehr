@@ -6,7 +6,9 @@ import { logIn } from './helpers';
 // Registers its own patient with all identifiers, then searches five ways.
 
 async function searchAndExpect(page: Page, term: string, family: string, label: string) {
-  const box = page.getByRole('searchbox').first();
+  // Must be the patient search, not e.g. a home-page table's "Filter table"
+  // searchbox — which only exists when the DB has data (seeded local stacks).
+  const box = page.getByPlaceholder(/search for a patient/i).first();
   if (!(await box.isVisible().catch(() => false))) {
     await page.getByRole('banner').getByRole('button', { name: /search patient/i }).click();
   }

@@ -37,6 +37,11 @@ Pending decisions/inputs:
 
 ## Session log
 
+### 2026-08-22 (verification) — Milestone check before Stage 2 (laptop)
+- Independent re-verification of gates 0+1: CI green on the gate-closing commit, all claimed artifacts present, FHIR typed-identifier query ✓, 5,056 patients in DB, name search ~130 ms, fhir2 privilege gap re-confirmed live (frontdesk 200 on FHIR obs, blocked on REST).
+- Gap fixed: `search.spec.ts` was only green in CI because CI's DB is empty — on a seeded DB, `getByRole('searchbox').first()` matched the home page's disabled "Filter table" input and failed deterministically. Locator scoped to the patient-search placeholder; suite green against the 5k-patient DB.
+- Gap fixed: `make dev` on an already-running stack rebuilt target/ under the containers' bind mounts without restarting them — frontend silently served 404 for `sankofa-frontend-config.json` (entire Ghana form config gone). `dev` target now restarts openmrs+frontend when the stack was up, waits for health, and asserts the config is served.
+
 ### 2026-08-22 (later) — Tasks 1.8 + 1.9; Test Gate 1 local checks (laptop)
 - `tools/seed-patients/seed.py`: 5,052 synthetic Ghanaian patients (names/phones/districts, ~70% Ghana Card, ~60% NHIS) at 54/s; requests folder numbers AND OpenMRS IDs from Idgen (both types are required). Built-in latency report.
 - **Test Gate 1 status (local+CI form):** #2 specs green ✓ · #3 worst search p95 = 666ms < 2s ✓ · #4 malformed values rejected ✓ (spec) · #5 FHIR Patient?identifier=<ghana-card> returns correctly-typed identifiers ✓ · #6 Front Desk blocked (REST) ✓ with FHIR gap documented · #1 (non-author UAT on staging) deferred with 0.4 to pre-launch.
