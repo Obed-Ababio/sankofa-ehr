@@ -2,6 +2,9 @@
   "@openmrs/esm-primary-navigation-app": {
     "externalRefLinks": []
   },
+  "@openmrs/esm-patient-chart-app": {
+    "showServiceQueueFields": true
+  },
   "@openmrs/esm-patient-registration-app": {
     "sections": ["demographics", "contact", "relationships"],
     "sectionDefinitions": [

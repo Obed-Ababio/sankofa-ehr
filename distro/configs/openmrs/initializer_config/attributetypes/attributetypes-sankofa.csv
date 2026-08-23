@@ -1,0 +1,2 @@
+Uuid,Void/Retire,Entity name,Name,Description,Min occurs,Max occurs,Datatype classname,_order:2000
+c61ce16f-272a-41e7-9924-4c555d0932c5,,Visit,Queue number,Visit queue number displayed on the service queues board (uuid pinned to the O3 frontend default),0,1,org.openmrs.customdatatype.datatype.FreeTextDatatype

@@ -45,7 +45,7 @@ Pending decisions/inputs:
 | 2.4 Consultation form | ⬜ |
 | 2.5 Medications (NHIS list) | ⬜ |
 | 2.6 Prescription printing | ⬜ |
-| 2.7 Service queues | ⬜ |
+| 2.7 Service queues | ✅ Done (2026-08-23) — Triage + Consultation queues via Initializer; check-in queues from the start-visit form; board + transfer proven by e2e (real-time two-browser check stays a Gate 2 manual item) |
 | 2.8 Chart review | ⬜ |
 | 2.9 FHIR contract test in CI | ⬜ |
 
@@ -55,6 +55,13 @@ Pending decisions/inputs for 2.1:
 - Upstream: CIEL 122604 (cholera) lacks an ICD-10 map; CIEL 86 (motor vehicle accident) carries a wrong map (N25.8) — report both to CIEL once we have the OCL/Talk account
 
 ## Session log
+
+### 2026-08-23 — Task 2.7 service queues (laptop)
+- Queue metadata (statuses/priorities/services concept sets, queue-tagged room locations) already shipped with the O3 base config — what was missing was the queues themselves. **Initializer upgraded 2.6.0 → 2.12.0** (the `queues` domain only exists from 2.7.0; distro pom now swaps the refapp-bundled omod). `configuration/queues/queues-sankofa.csv`: Triage @ Triage, Consultation @ Consultation Room 1 (both consultation rooms share one queue).
+- Check-in flow: `showServiceQueueFields: true` in the Sankofa frontend config puts Queue Location/Service/Priority on the start-visit form; `Queue number` visit attribute type created with the O3 default uuid (`c61ce16f…`) so queue numbers save.
+- **MariaDB fix:** the queue module's ~25-table join drove MariaDB's exhaustive join-plan search (optimizer_search_depth=62) into minutes-long "Statistics" hangs — every queue-entry call 504'd and stuck queries piled up. `--optimizer-search-depth=0` added to the mysql service (compose override replaces the whole `command` list, so it repeats the base flags). Queue-entry now ~150 ms.
+- `make dev` now also self-heals the proxy: when compose *recreates* containers (config change), nginx holds stale upstream IPs and everything 502s — dev restarts the proxy if the config assert fails.
+- e2e `queues.spec.ts`: register → check in (queue fields on start-visit form) → REST-assert Waiting entry in Triage queue → board shows the row under View→Triage → Transfer modal → patient under Consultation Room 1 → REST-assert the single active entry moved. Board quirk: it scopes to the login location by default; the old view keeps the stale row until the next poll (not asserted).
 
 ### 2026-08-22 (Stage 2, later) — Tasks 2.2 + 2.3 (laptop)
 - 2.2: `configuration/visittypes/visittypes-sankofa.csv` keeps OPD Visit (base O3 uuid `287463d3…`) and retires Facility/Home/Offline/Group Session, so the start-visit form offers exactly one type. Base visit types come from Ozone's `visittypes-core_data.csv`; our overlay file sorts after it, so Initializer applies the retirements last.

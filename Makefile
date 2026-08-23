@@ -17,6 +17,13 @@ dev:
 		docker restart ozone-openmrs-1 ozone-frontend-1; \
 		echo "Waiting for OpenMRS to come back (~2 min)..."; \
 		until curl -sf -o /dev/null http://localhost/openmrs/health/started; do sleep 5; done; \
+		if ! curl -sf -o /dev/null http://localhost/openmrs/spa/ozone/sankofa-frontend-config.json; then \
+			echo "Frontend config 502 — proxy likely holds stale IPs after a container recreate; restarting proxy"; \
+			docker restart ozone-proxy-1; \
+			for i in $$(seq 1 24); do \
+				curl -sf -o /dev/null http://localhost/openmrs/spa/ozone/sankofa-frontend-config.json && break; sleep 5; \
+			done; \
+		fi; \
 		curl -sf -o /dev/null http://localhost/openmrs/spa/ozone/sankofa-frontend-config.json \
 			&& echo "Healthy; Sankofa frontend config serving." \
 			|| { echo "ERROR: sankofa-frontend-config.json not served after restart"; exit 1; }; \

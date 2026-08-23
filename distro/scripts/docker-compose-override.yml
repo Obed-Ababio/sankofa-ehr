@@ -5,3 +5,20 @@ services:
     environment:
       # Load our config after the base Ozone config so our keys override.
       SPA_CONFIG_URLS: /openmrs/spa/ozone/ozone-frontend-config.json,/openmrs/spa/ozone/sankofa-frontend-config.json
+  mysql:
+    # Compose REPLACES `command` (no merge), so this repeats the base flags
+    # from docker-compose-common.yml plus optimizer-search-depth=0: the queue
+    # module's ~25-table join drives MariaDB's default exhaustive (depth 62)
+    # join-plan search into minutes-long "Statistics" state, wedging every
+    # queue-entry request. Depth 0 = greedy auto selection, plans instantly.
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --skip-character-set-client-handshake
+      - --skip-innodb-read-only-compressed
+      - --log-bin=mysqld-bin
+      - --binlog-format=ROW
+      - --server-id=2
+      - --sync-binlog=1
+      - --binlog-annotate-row-events=0
+      - --optimizer-search-depth=0

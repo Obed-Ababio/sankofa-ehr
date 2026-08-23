@@ -16,14 +16,69 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
+    <!-- Initializer >= 2.7.0 is needed for the `queues` config domain (2.7);
+         the refapp distro zip bundles 2.6.0, replaced during the build. -->
+    <initializerVersion>2.12.0</initializerVersion>
   </properties>
 
   <dependencies>
-    <!-- TODO: Add any implementation-specific dependencies -->
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>initializer-omod</artifactId>
+      <version>${initializerVersion}</version>
+      <type>jar</type>
+    </dependency>
   </dependencies>
 
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>Copy upgraded Initializer omod into the distro</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.openmrs.module</groupId>
+                  <artifactId>initializer-omod</artifactId>
+                  <version>${initializerVersion}</version>
+                  <destFileName>initializer-${initializerVersion}.omod</destFileName>
+                </artifactItem>
+              </artifactItems>
+              <outputDirectory>
+                ${project.build.directory}/${project.artifactId}-${project.version}/distro/binaries/openmrs/modules</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>Remove the refapp-bundled Initializer omod</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <target>
+                <delete>
+                  <fileset
+                    dir="${project.build.directory}/${project.artifactId}-${project.version}/distro/binaries/openmrs/modules"
+                    includes="initializer-2.6.0.omod" />
+                </delete>
+              </target>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
