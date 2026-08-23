@@ -26,14 +26,19 @@ Status of the [master plan](ghana-clinic-emr-implementation-plan.md), updated at
 | 1.5 Duplicate guard + SOP | ✅ Done (2026-08-22) — SOP + uniqueness; no similar-patient feature in reg app 6.1.0, no matching engine per plan |
 | 1.6 Roles & users (Front Desk, Clinician, Clinic Admin, Support) | ✅ Done (2026-08-22) — REST-level isolation verified; FHIR privilege gap documented for Stage 3 |
 | 1.7 Locations | ✅ Done (2026-08-21) — org → branch → rooms per ADR-0003; demo sites retired |
-| 1.8 Seed & performance tool (5,000 patients) | ⬜ |
-| 1.9 Playwright specs in CI | ⬜ |
+| 1.8 Seed & performance tool (5,000 patients) | ✅ Done (2026-08-22) — 5,052 seeded @54/s; worst p95 666ms (gate <2s) |
+| 1.9 Playwright specs in CI | ✅ Done (2026-08-22) — 6 passing + 1 fixme (FHIR gap); search by all 5 paths |
 
 Pending decisions/inputs:
 - Verify NHIS number format on a current NHIA card (needed before locking 1.1 validation)
 - Cloud provider for staging VM (deferred with 0.4 to pre-launch)
 
 ## Session log
+
+### 2026-08-22 (later) — Tasks 1.8 + 1.9; Test Gate 1 local checks (laptop)
+- `tools/seed-patients/seed.py`: 5,052 synthetic Ghanaian patients (names/phones/districts, ~70% Ghana Card, ~60% NHIS) at 54/s; requests folder numbers AND OpenMRS IDs from Idgen (both types are required). Built-in latency report.
+- **Test Gate 1 status (local+CI form):** #2 specs green ✓ · #3 worst search p95 = 666ms < 2s ✓ · #4 malformed values rejected ✓ (spec) · #5 FHIR Patient?identifier=<ghana-card> returns correctly-typed identifiers ✓ · #6 Front Desk blocked (REST) ✓ with FHIR gap documented · #1 (non-author UAT on staging) deferred with 0.4 to pre-launch.
+- `search.spec.ts`: one patient found via name, folder number, Ghana Card, NHIS, phone through the real UI.
 
 ### 2026-08-22 — Tasks 1.5 + 1.6 (laptop)
 - 1.5: front-desk search-before-create SOP (`docs/sop/front-desk-registration.md`); registration app 6.1.0 has no similar-patient feature — guard = SOP + identifier uniqueness (no matching engine, per plan).
