@@ -35,7 +35,33 @@ Pending decisions/inputs:
 - Verify NHIS number format on a current NHIA card (needed before locking 1.1 validation)
 - Cloud provider for staging VM (deferred with 0.4 to pre-launch)
 
+## Stage 2 — OPD clinical workflow (in progress)
+
+| Task | Status |
+|---|---|
+| 2.1 Concept dictionary + Ghana OPD diagnosis value set | 🔶 Draft ready (2026-08-22) — 155-entry CIEL-resolved draft awaiting **clinician sign-off** (`docs/clinical/ghana-opd-value-set.md`); load blocked on sign-off + founder's OCL account |
+| 2.2 OPD visit type | ⬜ |
+| 2.3 Vitals & biometrics | ⬜ |
+| 2.4 Consultation form | ⬜ |
+| 2.5 Medications (NHIS list) | ⬜ |
+| 2.6 Prescription printing | ⬜ |
+| 2.7 Service queues | ⬜ |
+| 2.8 Chart review | ⬜ |
+| 2.9 FHIR contract test in CI | ⬜ |
+
+Pending decisions/inputs for 2.1:
+- **Founder: line up the Ghanaian clinician** to review `docs/clinical/ghana-opd-value-set.md` (7 open questions are listed in the doc)
+- **Founder: create an OCL account** (openconceptlab.org — anonymous API access was disabled, so both the collection and any API verification need an account) and an org for Sankofa
+- Upstream: CIEL 122604 (cholera) lacks an ICD-10 map; CIEL 86 (motor vehicle accident) carries a wrong map (N25.8) — report both to CIEL once we have the OCL/Talk account
+
 ## Session log
+
+### 2026-08-22 (Stage 2 kickoff) — Task 2.1 draft value set (laptop)
+- Ghana OPD diagnosis value set drafted: 155 diagnoses across 20 categories (GHS top OPD causes + plan §4 list), every entry resolved to a live CIEL concept with its ICD-10-WHO mapping captured. Deliverables: `docs/clinical/ghana-opd-value-set.md` (clinician review doc with sign-off block + 7 open questions) and `ghana-opd-diagnoses-draft.csv` (machine-readable, source of truth).
+- Tooling: `tools/concepts/resolve-value-set.py` (resolve terms→CIEL / verify a value-set CSV; retries; `CIEL_BASE_URL` overridable) + `render-value-set-table.py` (regenerates the doc table from the CSV). Terms curated in `tools/concepts/ghana-opd-terms.csv`; 36 entries pin explicit CIEL ids where name search picks a sibling concept.
+- **OCL's API dropped anonymous access** (2024/25 pricing change) — resolution runs against a CIEL-loaded OpenMRS instead (Bahmni standard demo has full CIEL; OpenMRS dev3 is only a subset; demo/o3/qa-refapp servers are behind Cloudflare). Founder needs an OCL account before the collection can be created.
+- CIEL upstream issues found: 122604 cholera has no ICD-10 map; 86 "Accident, motor vehicle" maps to N25.8 (renal!) — flagged in the review doc, to be reported.
+- Load path confirmed present in the distro: OCL module 2.2.0 + Initializer 2.6.0 (`ocl` domain); current dictionary is the 1,197-concept O3 starter set with CIEL source registered.
 
 ### 2026-08-22 (verification) — Milestone check before Stage 2 (laptop)
 - Independent re-verification of gates 0+1: CI green on the gate-closing commit, all claimed artifacts present, FHIR typed-identifier query ✓, 5,056 patients in DB, name search ~130 ms, fhir2 privilege gap re-confirmed live (frontdesk 200 on FHIR obs, blocked on REST).

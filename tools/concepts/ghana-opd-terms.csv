@@ -1,0 +1,156 @@
+category,term,ciel_id,note
+Malaria & febrile illness,Malaria,,GHS OPD cause #1
+Malaria & febrile illness,Confirmed malaria,160148,RDT/microscopy positive
+Malaria & febrile illness,Presumed malaria,166623,CIEL name: Suspected malaria
+Malaria & febrile illness,Severe malaria,,referral dx
+Malaria & febrile illness,Malaria in pregnancy,134594,"CIEL name: Maternal malaria during pregnancy, baby not yet delivered"
+Malaria & febrile illness,Fever,,pyrexia of unknown origin
+Malaria & febrile illness,Typhoid fever,,GHS OPD top-20
+Infectious & parasitic,Cholera,122604,NO ICD-10 map in CIEL — clinician/CIEL request decision
+Infectious & parasitic,Amebiasis,,
+Infectious & parasitic,Giardiasis,,
+Infectious & parasitic,Ascariasis,,
+Infectious & parasitic,Intestinal helminthiasis,,"GHS ""intestinal worms"""
+Infectious & parasitic,Schistosomiasis,,endemic (lakes/irrigation)
+Infectious & parasitic,Onchocerciasis,,endemic (river basins)
+Infectious & parasitic,Buruli ulcer,,Ghana endemic
+Infectious & parasitic,Tuberculosis,112141,"all forms, per GHS register; CIEL pulmonary subtypes exist if needed"
+Infectious & parasitic,HIV disease,138405,
+Infectious & parasitic,Measles,,
+Infectious & parasitic,Varicella,,chickenpox
+Infectious & parasitic,Mumps,,
+Infectious & parasitic,Pertussis,114190,CIEL name: Whooping cough
+Infectious & parasitic,Viral hepatitis B,111759,acute/unspecified hepatitis B
+Infectious & parasitic,COVID-19,165623,
+Infectious & parasitic,Influenza,,
+Infectious & parasitic,Meningitis,,referral dx; northern belt
+Infectious & parasitic,Sepsis,,referral dx
+Gastrointestinal,Gastroenteritis,,"GHS ""diarrhoea diseases"""
+Gastrointestinal,Diarrhea,,
+Gastrointestinal,Dysentery,126558,CIEL name: Shigellosis (bacillary dysentery); amoebic covered by Amebiasis
+Gastrointestinal,Food poisoning,121272,CIEL name: Bacterial food poisoning
+Gastrointestinal,Gastroesophageal reflux disease,,
+Gastrointestinal,Gastritis,,
+Gastrointestinal,Peptic ulcer disease,,
+Gastrointestinal,Dyspepsia,,
+Gastrointestinal,Constipation,,
+Gastrointestinal,Hemorrhoids,,
+Gastrointestinal,Acute appendicitis,,referral dx
+Gastrointestinal,Inguinal hernia,,referral dx
+Dental & oral,Oral candidiasis,5334,
+Dental & oral,Dental caries,,GHS OPD top-20
+Dental & oral,Gingivitis,,
+Dental & oral,Periodontitis,,
+Dental & oral,Aphthous ulcer,148531,mouth ulcer
+Respiratory,Upper respiratory tract infection,149478,GHS OPD cause #2
+Respiratory,Common cold,,acute nasopharyngitis
+Respiratory,Acute pharyngitis,,
+Respiratory,Acute tonsillitis,,
+Respiratory,Acute sinusitis,,
+Respiratory,Allergic rhinitis,,
+Respiratory,Acute otitis media,,"GHS ""acute ear infection"""
+Respiratory,Chronic suppurative otitis media,145151,tubotympanic (safe) CSOM — clinician to confirm subtype
+Respiratory,Otitis externa,,
+Respiratory,Impacted cerumen,,very common ENT presentation
+Respiratory,Pneumonia,,
+Respiratory,Acute bronchitis,,
+Respiratory,Bronchiolitis,,paediatric
+Respiratory,Asthma,,
+Respiratory,Acute exacerbation of asthma,4,
+Respiratory,Chronic obstructive pulmonary disease,,
+Cardiovascular,Essential hypertension,,GHS OPD top-5
+Cardiovascular,Congestive heart failure,,
+Cardiovascular,Angina pectoris,,
+Cardiovascular,Cerebrovascular accident,,stroke; referral dx
+Endocrine & metabolic,Diabetes mellitus type 2,142473,
+Endocrine & metabolic,Diabetes mellitus type 1,,
+Endocrine & metabolic,Diabetes mellitus,,unspecified — register category
+Endocrine & metabolic,Hypoglycemia,,CIEL name: Hypoglycemic syndrome
+Endocrine & metabolic,Hyperlipidemia,,
+Endocrine & metabolic,Goiter,,
+Endocrine & metabolic,Hyperthyroidism,,CIEL's only ICD map is E05.5 (thyrotoxic crisis) — GHS expects E05.9; clinician to advise
+Endocrine & metabolic,Hypothyroidism,,
+Endocrine & metabolic,Obesity,,
+Endocrine & metabolic,Gout,,
+Nutrition,Severe acute malnutrition,,
+Nutrition,Moderate acute malnutrition,,
+Nutrition,Kwashiorkor,,
+Nutrition,Marasmus,132636,CIEL name: Nutritional marasmus
+Blood,Iron deficiency anemia,,
+Blood,Anemia,,GHS OPD top-10; unspecified
+Blood,Sickle cell anemia,117703,high prevalence
+Blood,Sickle cell crisis,117643,CIEL name: Hb-SS disease with crisis
+Blood,Glucose-6-phosphate dehydrogenase deficiency,139387,common in Ghana
+Genitourinary,Urinary tract infection,,
+Genitourinary,Acute pyelonephritis,,
+Genitourinary,Gonorrhea,,
+Genitourinary,Syphilis,,
+Genitourinary,Chlamydia,,
+Genitourinary,Genital herpes,,
+Genitourinary,Trichomoniasis,,
+Genitourinary,Vulvovaginal candidiasis,146520,CIEL name: Candidal vulvovaginitis
+Genitourinary,Bacterial vaginosis,,
+Genitourinary,Pelvic inflammatory disease,,GHS OPD top-20
+Genitourinary,Sexually transmitted infection,112992,CIEL name: Sexually transmitted disease
+Genitourinary,Benign prostatic hyperplasia,121164,CIEL name: Benign prostatic hypertrophy
+Genitourinary,Urolithiasis,111628,CIEL name: Urinary calculus; covers renal colic
+Gynaecological,Dysmenorrhea,,
+Gynaecological,Menorrhagia,,
+Gynaecological,Infertility,118293,CIEL has no sex-neutral dx — female infertility; clinician to confirm
+Pregnancy-related,Pregnancy,152305,CIEL name: Pregnancy confirmed
+Pregnancy-related,Pregnancy-induced hypertension,112275,= gestational HTN; plain PIH concept (CIEL 113859) has no ICD-10 map
+Pregnancy-related,Pre-eclampsia,,referral dx
+Pregnancy-related,Hyperemesis gravidarum,,
+Pregnancy-related,Threatened abortion,,
+Pregnancy-related,Anemia in pregnancy,148834,CIEL name: Anemia of mother complicating pregnancy
+Pregnancy-related,Mastitis,,
+Musculoskeletal,Osteoarthritis,114702,CIEL name: Osteoarthrosis; GHS rheumatism & joint pains
+Musculoskeletal,Rheumatoid arthritis,,
+Musculoskeletal,Arthralgia,,joint pain unspecified
+Musculoskeletal,Low back pain,,
+Musculoskeletal,Neck pain,,
+Musculoskeletal,Myalgia,,
+Musculoskeletal,Sciatica,,
+Musculoskeletal,Sprain,,
+Musculoskeletal,Fracture,,referral dx
+Skin & soft tissue,Cellulitis,,
+Skin & soft tissue,Skin abscess,,
+Skin & soft tissue,Impetigo,,
+Skin & soft tissue,Dermatophytosis,,tinea/ringworm
+Skin & soft tissue,Scabies,,
+Skin & soft tissue,Atopic dermatitis,121348,eczema
+Skin & soft tissue,Contact dermatitis,,
+Skin & soft tissue,Urticaria,,
+Skin & soft tissue,Acne vulgaris,,
+Skin & soft tissue,Herpes zoster,,
+Skin & soft tissue,Chronic ulcer of skin,120551,tropical ulcer
+Eye,Acute conjunctivitis,,"GHS ""acute eye infection"""
+Eye,Allergic conjunctivitis,,
+Eye,Cataract,,referral dx
+Eye,Refractive error,,
+Eye,Foreign body in eye,,
+Eye,Glaucoma,,referral dx
+Eye,Hordeolum,,stye
+Neurological,Headache,,
+Neurological,Migraine,,
+Neurological,Epilepsy,,
+Neurological,Febrile convulsion,,paediatric
+Neurological,Peripheral neuropathy,,diabetic follow-up
+Neurological,Vertigo,,
+Mental health,Depression,,
+Mental health,Anxiety disorder,,
+Mental health,Acute psychosis,154937,CIEL name: Acute and transient psychotic disorder; referral dx
+Mental health,Insomnia,,
+Mental health,Alcohol use disorder,166221,
+Injuries,Road traffic accident,133924,CIEL name: Motor vehicle accident (victim); CIEL 86 carries a wrong ICD map (N25.8) — reported upstream
+Injuries,Head injury,,referral dx
+Injuries,Laceration,,open wound
+Injuries,Contusion,,soft tissue injury
+Injuries,Burn,,
+Injuries,Dog bite,,rabies exposure pathway
+Injuries,Snake bite,,rural clinics
+Injuries,Insect bite,114795,CIEL name: Insect bites and stings
+Injuries,Foreign body in ear,,common paediatric ENT
+General,Dehydration,,
+General,Allergic reaction,,
+General,Epistaxis,,
