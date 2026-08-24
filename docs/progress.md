@@ -44,7 +44,7 @@ Pending decisions/inputs:
 | 2.3 Vitals & biometrics | ✅ Done (2026-08-22) — standard O3 vitals app; ranges verified, temperature thresholds added (36–37.4 normal, 35/40 critical — **clinician to confirm** with value set); BMI auto-computes |
 | 2.4 Consultation form | ⬜ |
 | 2.5 Medications (NHIS list) | ✅ Done (2026-08-24) — 424 formulations from the NHIS Medicines List 2025 (levels ≤C), CIEL-mapped, demo drugs retired; order basket verified by e2e; 16 unmapped items flagged for clinician (`docs/clinical/ghana-formulary.md`) |
-| 2.6 Prescription printing | ⬜ |
+| 2.6 Prescription printing | 🔶 Spike done (2026-08-24) — built-in print is a medication-list table, not a prescription (ADR-0004); **esm-gh-prescription-print** to be built after 2.4 so scripts carry the diagnosis |
 | 2.7 Service queues | ✅ Done (2026-08-23) — Triage + Consultation queues via Initializer; check-in queues from the start-visit form; board + transfer proven by e2e (real-time two-browser check stays a Gate 2 manual item) |
 | 2.8 Chart review | ⬜ |
 | 2.9 FHIR contract test in CI | ⬜ |
@@ -55,6 +55,11 @@ Pending decisions/inputs for 2.1:
 - Upstream: CIEL 122604 (cholera) lacks an ICD-10 map; CIEL 86 (motor vehicle accident) carries a wrong map (N25.8) — report both to CIEL once we have the OCL/Talk account
 
 ## Session log
+
+### 2026-08-24 (later) — Task 2.6 print spike (laptop)
+- Spike executed against the live stack with the NHIS formulary: full prescribing flow (order basket → Amoxicillin Capsule 250 mg, 500 mg PO TDS ×5d, qty 15, indication URTI → sign) then every print affordance. Only affordance is the medications app's `showPrintButton` (now enabled in our frontend config — useful as a medication-list printout); it prints the datatable, and the row menu has only Modify/Discontinue.
+- **Verdict (ADR-0004): insufficient** — no facility identity, prescriber name/signature block, diagnosis, folder number, or A5/80 mm layouts; prints the whole active list, not the visit's script. Fails NHIS dispensing guidelines. → build `esm-gh-prescription-print` (first custom ESM) **after 2.4**, so printed scripts carry the coded diagnosis.
+- Order-form quirk for 2.4 polish: quantity units default to "Milligram" even for capsules.
 
 ### 2026-08-24 — Task 2.5 NHIS medications (laptop)
 - Parsed the **NHIS Medicines List March 2025** (NHIA PDF, 551 formulations, prices + prescribing levels) into `tools/drugs/nhis-ml-2025.csv`. Scope = levels A/M/B1/B2/C (441); D/SM excluded. `tools/drugs/build-formulary.py` resolves each generic + dosage form to CIEL (pins.csv holds 79 curated overrides: UK→US spellings, NHIA typos like "Ceftriazone"/"Ephedrine HCI", combos, insulin naming) and emits `configuration/drugs/drugs-sankofa.csv` (424; one NHIS pack-size duplicate deduped) plus `configuration/concepts/concepts-sankofa_2_drug_concepts.csv` (227 referenced CIEL concepts created under canonical CIEL uuids — full CIEL via OCL later updates them in place). 16 formulations have no CIEL concept (BP/BPC galenicals like Aqueous Cream, Simple Linctus) — flagged for clinician in `docs/clinical/ghana-formulary.md` (review doc; NHIA already curated the list, so it ships to dev and gets reviewed rather than blocking).

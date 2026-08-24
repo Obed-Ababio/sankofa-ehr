@@ -5,6 +5,9 @@
   "@openmrs/esm-patient-chart-app": {
     "showServiceQueueFields": true
   },
+  "@openmrs/esm-patient-medications-app": {
+    "showPrintButton": true
+  },
   "@openmrs/esm-patient-registration-app": {
     "sections": ["demographics", "contact", "relationships"],
     "sectionDefinitions": [
