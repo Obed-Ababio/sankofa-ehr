@@ -21,3 +21,21 @@ export async function logIn(page: Page, username = 'admin', password = 'Admin123
     await expect(page).toHaveURL(/\/home/, { timeout: 10_000 });
   }).toPass({ timeout: 120_000 });
 }
+
+// Queue entries outlive their visits (ending a visit does NOT end its queue
+// entry), so test runs accumulate Waiting rows until the board paginates new
+// patients out of sight. Call before any spec that asserts on the board.
+export async function endAllActiveQueueEntries(request: import('@playwright/test').APIRequestContext) {
+  const auth = { Authorization: 'Basic ' + Buffer.from('admin:Admin123').toString('base64') };
+  const res = await request.get('/openmrs/ws/rest/v1/queue-entry?v=custom:(uuid,endedAt)&limit=100', {
+    headers: auth,
+  });
+  const entries: { uuid: string; endedAt: string | null }[] = (await res.json()).results;
+  const now = new Date().toISOString();
+  for (const e of entries.filter((e) => !e.endedAt)) {
+    await request.post(`/openmrs/ws/rest/v1/queue-entry/${e.uuid}`, {
+      headers: auth,
+      data: { endedAt: now },
+    });
+  }
+}

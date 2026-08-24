@@ -30,6 +30,10 @@ test('OPD visit: start, record vitals, end — visit and obs persisted', async (
   await expect(typeRadios).toHaveCount(1);
   await expect(page.getByText('OPD Visit').first()).toBeVisible();
   await typeRadios.first().check({ force: true });
+  // Queue fields (2.7) are on the form; left empty they trigger a broken
+  // queue-entry-number call whose error dialog blocks the workspace.
+  await page.getByRole('combobox', { name: /select a queue location/i }).selectOption({ label: 'Triage' });
+  await page.getByRole('combobox', { name: /select a service/i }).selectOption({ label: 'Triage' });
   // Two buttons share this name: the siderail trigger and the form submit.
   await page.getByRole('button', { name: /^start a visit$/i }).last().click();
   await expect(page.getByText(/active visit/i).first()).toBeVisible({ timeout: 60_000 });
@@ -53,13 +57,17 @@ test('OPD visit: start, record vitals, end — visit and obs persisted', async (
   await page.getByRole('button', { name: /save/i }).click();
   await expect(page.getByText(/vitals.*(saved|recorded)/i).first()).toBeVisible({ timeout: 60_000 });
 
-  // The saved observations must exist with the right values (temp via CIEL 5088).
-  const obsRes = await request.get(
-    `/openmrs/ws/rest/v1/obs?patient=${uuid}&concept=5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&v=custom:(value)`,
-    { headers: AUTH },
-  );
-  const temps = (await obsRes.json()).results.map((o: { value: number }) => o.value);
-  expect(temps).toContain(38.5);
+  // The saved observations must exist with the right values (temp via CIEL
+  // 5088). The save toast fires before the obs are queryable — poll.
+  await expect
+    .poll(async () => {
+      const obsRes = await request.get(
+        `/openmrs/ws/rest/v1/obs?patient=${uuid}&concept=5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&v=custom:(value)`,
+        { headers: AUTH },
+      );
+      return (await obsRes.json()).results.map((o: { value: number }) => o.value);
+    }, { timeout: 30_000 })
+    .toContain(38.5);
 
   // The abnormal-range config that drives the UI flag must be live (2.3).
   const tempConcept = await (

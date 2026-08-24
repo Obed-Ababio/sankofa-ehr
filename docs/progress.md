@@ -43,7 +43,7 @@ Pending decisions/inputs:
 | 2.2 OPD visit type | ✅ Done (2026-08-22) — OPD Visit is the only active visit type (others retired via Initializer); start/stop proven on the chart by e2e |
 | 2.3 Vitals & biometrics | ✅ Done (2026-08-22) — standard O3 vitals app; ranges verified, temperature thresholds added (36–37.4 normal, 35/40 critical — **clinician to confirm** with value set); BMI auto-computes |
 | 2.4 Consultation form | ⬜ |
-| 2.5 Medications (NHIS list) | ⬜ |
+| 2.5 Medications (NHIS list) | ✅ Done (2026-08-24) — 424 formulations from the NHIS Medicines List 2025 (levels ≤C), CIEL-mapped, demo drugs retired; order basket verified by e2e; 16 unmapped items flagged for clinician (`docs/clinical/ghana-formulary.md`) |
 | 2.6 Prescription printing | ⬜ |
 | 2.7 Service queues | ✅ Done (2026-08-23) — Triage + Consultation queues via Initializer; check-in queues from the start-visit form; board + transfer proven by e2e (real-time two-browser check stays a Gate 2 manual item) |
 | 2.8 Chart review | ⬜ |
@@ -55,6 +55,13 @@ Pending decisions/inputs for 2.1:
 - Upstream: CIEL 122604 (cholera) lacks an ICD-10 map; CIEL 86 (motor vehicle accident) carries a wrong map (N25.8) — report both to CIEL once we have the OCL/Talk account
 
 ## Session log
+
+### 2026-08-24 — Task 2.5 NHIS medications (laptop)
+- Parsed the **NHIS Medicines List March 2025** (NHIA PDF, 551 formulations, prices + prescribing levels) into `tools/drugs/nhis-ml-2025.csv`. Scope = levels A/M/B1/B2/C (441); D/SM excluded. `tools/drugs/build-formulary.py` resolves each generic + dosage form to CIEL (pins.csv holds 79 curated overrides: UK→US spellings, NHIA typos like "Ceftriazone"/"Ephedrine HCI", combos, insulin naming) and emits `configuration/drugs/drugs-sankofa.csv` (424; one NHIS pack-size duplicate deduped) plus `configuration/concepts/concepts-sankofa_2_drug_concepts.csv` (227 referenced CIEL concepts created under canonical CIEL uuids — full CIEL via OCL later updates them in place). 16 formulations have no CIEL concept (BP/BPC galenicals like Aqueous Cream, Simple Linctus) — flagged for clinician in `docs/clinical/ghana-formulary.md` (review doc; NHIA already curated the list, so it ships to dev and gets reviewed rather than blocking).
+- Demo cleanout: 320 demo drugs + 469 demo drug concepts retired via overlays (demo concepts use random uuids and their names collide with CIEL FSNs — `DuplicateConceptNameException` until retired first).
+- **Provider gap found:** EMR-only profile ships no provider record for admin — the drug-order workspace crashes on `currentProvider.uuid` ("An error has occurred"). e2e now self-provisions an idempotent provider ("superuser"); real provider management lands with clinician users.
+- Initializer gotchas that cost hours: within a domain, files are processed in a fixed order and a file's checksum is recorded even when lines FAIL — a failed file won't retry until its content changes (bump a header, e.g. `_order`); startup copies `distribution/openmrs_config` → `data/configuration` but never DELETES renamed/removed files (stale CSVs keep loading — `docker exec … rm` them or destroy volumes); name our retire-then-create pairs so lexical order matches intent (`…_1_retire…`, `…_2_…`).
+- e2e: `formulary.spec.ts` (REST: exactly 424 active drugs, NHIS staples present, demo drugs gone; UI: order basket search finds Artemether+Lumefantrine during an OPD visit). Suite hardened: queue entries outlive visits → `endAllActiveQueueEntries` helper + `workers: 1` (parallel specs raced shared queue state); REST asserts after UI saves poll (toasts fire before data is queryable); specs that start visits must fill the queue fields or a broken `queue-entry-number` call blocks the workspace.
 
 ### 2026-08-23 — Task 2.7 service queues (laptop)
 - Queue metadata (statuses/priorities/services concept sets, queue-tagged room locations) already shipped with the O3 base config — what was missing was the queues themselves. **Initializer upgraded 2.6.0 → 2.12.0** (the `queues` domain only exists from 2.7.0; distro pom now swaps the refapp-bundled omod). `configuration/queues/queues-sankofa.csv`: Triage @ Triage, Consultation @ Consultation Room 1 (both consultation rooms share one queue).

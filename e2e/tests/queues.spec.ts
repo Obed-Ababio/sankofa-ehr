@@ -1,9 +1,13 @@
 import { test, expect, type Page } from '@playwright/test';
-import { logIn } from './helpers';
+import { logIn, endAllActiveQueueEntries } from './helpers';
 
 const AUTH = { Authorization: 'Basic ' + Buffer.from('admin:Admin123').toString('base64') };
 const TRIAGE_QUEUE = 'b6d0f3e4-5a92-4f13-8f6b-1c2a3d4e5f01';
 const CONSULT_QUEUE = 'b6d0f3e4-5a92-4f13-8f6b-1c2a3d4e5f02';
+
+test.beforeAll(async ({ request }) => {
+  await endAllActiveQueueEntries(request);
+});
 
 // Stage 2 (task 2.7): front desk queues the patient at check-in (queue fields
 // on the start-visit form), the patient shows on the service-queues board as
@@ -37,13 +41,15 @@ test('check-in queues the patient for triage; queue board shows and moves them',
   await expect(page.getByText(/active visit/i).first()).toBeVisible({ timeout: 60_000 });
 
   // Backend truth: one queue entry, in the Triage queue, status Waiting.
-  const entryRes = await request.get(
-    `/openmrs/ws/rest/v1/queue-entry?patient=${uuid}&v=full`,
-    { headers: AUTH },
-  );
-  expect(entryRes.ok()).toBeTruthy();
-  const entries = (await entryRes.json()).results;
-  expect(entries).toHaveLength(1);
+  // The form submits the queue entry asynchronously after the visit — poll.
+  let entries: any[] = [];
+  await expect
+    .poll(async () => {
+      const res = await request.get(`/openmrs/ws/rest/v1/queue-entry?patient=${uuid}&v=full`, { headers: AUTH });
+      entries = (await res.json()).results;
+      return entries.length;
+    }, { timeout: 30_000 })
+    .toBe(1);
   expect(entries[0].queue.uuid).toBe(TRIAGE_QUEUE);
   expect(entries[0].status.display).toBe('Waiting');
 

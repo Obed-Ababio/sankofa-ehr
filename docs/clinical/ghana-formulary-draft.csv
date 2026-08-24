@@ -1,0 +1,442 @@
+nhis_code,generic,form,strength,level,price_ghs,unit_of_pricing,drug_concept_id,drug_concept_name,drug_concept_status,form_concept_id,form_concept_name,form_concept_status
+ACETAZIN1,Acetazolamide,Injection,500 mg,C,17.16,Ampoule,70125,Acetazolamide,exact,1516,Solution for injection,pinned
+ACETAZTA1,Acetazolamide,Tablet,250 mg,C,0.88,Tablet,70125,Acetazolamide,exact,1513,Tablet,pinned
+ACETYLDT1,Acetylsalicylic Acid,Tablet,75 mg (Dispersible),B2,0.33,Tablet,71617,Aspirin,exact,1513,Tablet,pinned
+ACETYLIN1,Acetylcysteine,Injection,200 mg/mL,B1,62.98,1 mL,70148,Acetylcysteine,exact,1516,Solution for injection,pinned
+ACETYLTA1,Acetylsalicylic Acid,Tablet,300 mg,A,0.55,Tablet,71617,Aspirin,exact,1513,Tablet,pinned
+ACICLOCR1,Acyclovir,Cream,5%,C,38.50,5G,70245,Acyclovir,exact,162413,Cream,pinned
+ACICLOEO1,Acyclovir,Eye Ointment,3%,C,52.03,2G,70245,Acyclovir,exact,1520,Ophthalmic ointment,pinned
+ACICLOIN1,Acyclovir,Injection,250 mg vial,C,136.13,Vial,70245,Acyclovir,exact,1516,Solution for injection,pinned
+ACICLOSU2,Acyclovir,Suspension,200 mg/5 mL,B2,276.91,20 mL,70245,Acyclovir,exact,162462,Suspension,pinned
+ACICLOTA1,Acyclovir,Tablet,200 mg,B2,1.98,Tablet,70245,Acyclovir,exact,1513,Tablet,pinned
+ACTCHAPO1,Activated Charcoal,Powder,50 g,A,38.56,50 G,70229,Activated charcoal,exact,162452,Powder,pinned
+ADRENAIN1,Adrenaline,Injection,1 mg/1mL (1:1000),M,7.70,1 mL,75744,Epinephrine,pinned,1516,Solution for injection,pinned
+ADRENAIN2,Adrenaline,Injection,"1:10,000",M,6.55,Vial,75744,Epinephrine,pinned,1516,Solution for injection,pinned
+ALBENDSY1,Albendazole,Syrup,100 mg/5 mL,A,4.10,20 mL,70439,Albendazole,exact,1515,Syrup,pinned
+ALBENDTA1,Albendazole,Tablet,200 mg,A,4.68,Tablet,70439,Albendazole,exact,1513,Tablet,pinned
+ALBENDTA2,Albendazole,Tablet,400 mg,A,1.17,Tablet,70439,Albendazole,exact,1513,Tablet,pinned
+ALLOPUTA1,Allopurinol,Tablet,100 mg,B1,0.94,Tablet,70878,Allopurinol,exact,1513,Tablet,pinned
+ALLOPUTA2,Allopurinol,Tablet,300 mg,B1,1.10,Tablet,70878,Allopurinol,exact,1513,Tablet,pinned
+AMINOPIN1,Aminophylline,Injection,250 mg/10 mL,B2,11.55,Ampoule,71101,Aminophylline,exact,1516,Solution for injection,pinned
+AMITRITA1,Amitriptyline,Tablet,10 mg,B1,0.66,Tablet,931,Amitriptyline,exact,1513,Tablet,pinned
+AMITRITA2,Amitriptyline,Tablet,25 mg,B2,0.18,Tablet,931,Amitriptyline,exact,1513,Tablet,pinned
+AMITRITA3,Amitriptyline,Tablet,50 mg,B1,0.66,Tablet,931,Amitriptyline,exact,1513,Tablet,pinned
+AMLODITA1,Amlodipine,Tablet,5 mg,B1,0.11,Tablet,71137,Amlodipine,exact,1513,Tablet,pinned
+AMLODITA2,Amlodipine,Tablet,10 mg,B1,0.12,Tablet,71137,Amlodipine,exact,1513,Tablet,pinned
+AMOARTPO1,Amodiaquine + Artesunate,Powder,75 mg + 25 mg,A,13.97,Sachet,161182,Amodiaquine / Artesunate,pinned,162452,Powder,pinned
+AMOARTPO2,Amodiaquine + Artesunate,Powder,150 mg + 50 mg,A,5.78,Sachet,161182,Amodiaquine / Artesunate,pinned,162452,Powder,pinned
+AMOARTTA1,Amodiaquine + Artesunate,Tablet,67.5 mg + 25 mg (6 tabs),A,5.15,1 Course,161182,Amodiaquine / Artesunate,pinned,1513,Tablet,pinned
+AMOARTTA2,Amodiaquine + Artesunate,Tablet,135 mg + 50 mg (12 tabs),A,5.07,1 Course,161182,Amodiaquine / Artesunate,pinned,1513,Tablet,pinned
+AMOARTTA3,Amodiaquine + Artesunate,Tablet,67.5 mg + 25 mg (3's),A,0.65,1 Course,161182,Amodiaquine / Artesunate,pinned,1513,Tablet,pinned
+AMOARTTA4,Amodiaquine + Artesunate,Tablet,135 mg + 50 mg (3's),A,0.70,1 Course,161182,Amodiaquine / Artesunate,pinned,1513,Tablet,pinned
+AMOARTTA5,Amodiaquine + Artesunate,Tablet,270 mg + 100 mg (3's),A,1.28,1 Course,161182,Amodiaquine / Artesunate,pinned,1513,Tablet,pinned
+AMOARTTA6,Amodiaquine + Artesunate,Tablet,270 mg + 100 mg (6's),A,2.15,1 Course,161182,Amodiaquine / Artesunate,pinned,1513,Tablet,pinned
+AMOXICCA1,Amoxicillin,Capsule,250 mg,A,0.47,Capsule,71160,Amoxicillin,exact,1608,Capsule,pinned
+AMOXICCA2,Amoxicillin,Capsule,500 mg,A,0.83,Capsule,71160,Amoxicillin,exact,1608,Capsule,pinned
+AMOXICDT1,Amoxicillin,Dispersible Tablet,250 mg,A,1.87,Tablet,71160,Amoxicillin,exact,162415,Disintegrating tablet,pinned
+AMOXICSU1,Amoxicillin,Suspension,125 mg/5 mL,A,16.50,100 mL,71160,Amoxicillin,exact,162462,Suspension,pinned
+AMPICIIN1,Ampicillin,Injection,500 mg,B1,3.85,Vial,71188,Ampicillin,exact,1516,Solution for injection,pinned
+ANIMGLIN1,Anti RH Immunoglobulin,Injection,1500IU /5ml,C,827.20,Vial,83322,Rho(d) immune globulin,pinned,1516,Solution for injection,pinned
+ANTESEIN1,Anti Tetanus Serum,Injection,1500 IU,B1,42.85,Vial,84877,Tetanus antitoxin,pinned,1516,Solution for injection,pinned
+AQUEOUCR1,Aqueous Cream,Cream,BP,A,29.98,100 G,,,not-found,162413,Cream,pinned
+ARTEMEIN2,Artemether,Injection,80mg/mL,B2,5.50,Ampoule,71560,Artemether,exact,1516,Solution for injection,pinned
+ARTESUIN1,Artesunate,Injection,30 mg,B2,3.18,Vial,71561,Artesunate,exact,1516,Solution for injection,pinned
+ARTESUIN2,Artesunate,Injection,60 mg,B2,3.18,Vial,71561,Artesunate,exact,1516,Solution for injection,pinned
+ARTESUIN3,Artesunate,Injection,120mg,B2,6.25,Vial,71561,Artesunate,exact,1516,Solution for injection,pinned
+ARTESURE1,Artesunate,Suppository,50 mg,A,5.49,Supp.,71561,Artesunate,exact,162458,Rectal suppository,pinned
+ARTESURE2,Artesunate,Suppository,100mg,A,6.05,Supp,71561,Artesunate,exact,162458,Rectal suppository,pinned
+ARTLUMDT1,Artemether + Lumefantrine,Dispersible Tablet,20 mg + 120 mg,A,4.39,6 Tablets,1447,Artemether-lumefantrine,pinned,162415,Disintegrating tablet,pinned
+ARTLUMSU1,Artemether + Lumefantrine,Suspension,(Powder For Reconstitution) 20 mg + 120 mg / 5 mL,A,25.85,100 mL,1447,Artemether-lumefantrine,pinned,162462,Suspension,pinned
+ARTLUMTA1,Artemether + Lumefantrine,Tablet,20 mg + 120 mg (24’s),A,2.24,1 Course,1447,Artemether-lumefantrine,pinned,1513,Tablet,pinned
+ARTLUMTA2,Artemether + Lumefantrine,Tablet,20 mg + 120 mg (6's),A,0.61,1 Course,1447,Artemether-lumefantrine,pinned,1513,Tablet,pinned
+ARTLUMTA3,Artemether + Lumefantrine,Tablet,20 mg + 120 mg (12's),A,1.25,1 Course,1447,Artemether-lumefantrine,pinned,1513,Tablet,pinned
+ARTLUMTA4,Artemether + Lumefantrine,Tablet,20 mg + 120 mg (18's),A,1.88,1 Course,1447,Artemether-lumefantrine,pinned,1513,Tablet,pinned
+ATEHYDTA1,Atenolol + Hydrochlorthiazide,Tablet,50 mg + 25 mg,B2,0.77,Tablet,161184,Atenolol / hydrochlorothiazide,pinned,1513,Tablet,pinned
+ATEHYDTA2,Atenolol + Hydrochlorthiazide,Tablet,100 mg + 25 mg,B2,1.20,Tablet,161184,Atenolol / hydrochlorothiazide,pinned,1513,Tablet,pinned
+ATENOLTA1,Atenolol,Tablet,25 mg,B2,1.10,Tablet,71652,Atenolol,exact,1513,Tablet,pinned
+ATENOLTA2,Atenolol,Tablet,50 mg,B2,0.54,Tablet,71652,Atenolol,exact,1513,Tablet,pinned
+ATENOLTA3,Atenolol,Tablet,100 mg,B2,1.10,Tablet,71652,Atenolol,exact,1513,Tablet,pinned
+ATORVATA1,Atorvastatin,Tablet,10 mg,C,0.23,Tablet,71665,Atorvastatin,exact,1513,Tablet,pinned
+ATORVATA2,Atorvastatin,Tablet,20 mg,C,0.30,Tablet,71665,Atorvastatin,exact,1513,Tablet,pinned
+ATROPIID1,Atropine,Eye Drops,1%,C,36.30,10 mL,71681,Atropine,exact,160054,Eye solution,pinned
+ATROPIIN1,Atropine,Injection,0.6 mg/mL,B2,5.50,1 mL,71681,Atropine,exact,1516,Solution for injection,pinned
+AZITHRCA1,Azithromycin,Capsule,250 mg,C,3.58,Capsule,71780,Azithromycin,exact,1608,Capsule,pinned
+AZITHRSU1,Azithromycin,Oral Suspension,200 mg/5 mL/15mL,C,35.20,15 mL,71780,Azithromycin,exact,1940,Oral suspension,pinned
+AZITHRSU2,Azithromycin,Oral Suspension,200 mg/5 mL/30mL,C,40.13,30 mL,71780,Azithromycin,exact,1940,Oral suspension,pinned
+BADOESIN1,Badoe's,Solution,"Injection, 1000 mL",B1,22.00,1000 mL,161186,Badoe's solution,pinned,162461,Solution,pinned
+BEACSAOI1,Benzoic Acid + Salicylic Acid,Ointment,6% + 3%,B1,17.60,25 G,103878,Benzoic acid / salicylic acid,exact,162776,Topical ointment,pinned
+BECDIPGA1,Beclometasone dipropionate,Inhaler,50 microgram/metered dose (200 doses),B2,119.90,Inhaler,71917,Beclomethasone dipropionate,pinned,162423,Inhalation form,pinned
+BECDIPGA2,Beclometasone dipropionate,Inhaler,100 microgram/metered dose (200 doses),B2,87.94,Inhaler,71917,Beclomethasone dipropionate,pinned,162423,Inhalation form,pinned
+BECDIPGA3,Beclometasone dipropionate,Inhaler,200 microgram/metered dose (200 doses),B2,87.94,Inhaler,71917,Beclomethasone dipropionate,pinned,162423,Inhalation form,pinned
+BENBENLO1,Benzyl Benzoate,Lotion,25%,A,24.86,30mL,72075,Benzyl benzoate,exact,162427,Lotion,pinned
+BENBENLO2,Benzyl Benzoate,Lotion,25%,A,28.60,100 mL,72075,Benzyl benzoate,exact,162427,Lotion,pinned
+BENDROTA1,Bendroflumethiazide,Tablet,2.5 mg,B1,0.12,Tablet,71983,Bendroflumethiazide,exact,1513,Tablet,pinned
+BENPERCR1,Benzoyl Peroxide,Cream,5%,C,118.25,30 G,72063,Benzoyl peroxide,exact,162413,Cream,pinned
+BENPERCR2,Benzoyl Peroxide,Cream,10%,C,131.45,30 G,72063,Benzoyl peroxide,exact,162413,Cream,pinned
+BENZATIN1,Benzatropine,Injection,1 mg/mL,C,110.20,1 mL,72071,Benztropine,exact,1516,Solution for injection,pinned
+BENZATTA1,Benzatropine,Tablet,2 mg,C,6.93,Tablet,72071,Benztropine,exact,1513,Tablet,pinned
+BENZYLIN1,Benzylpenicillin,Injection,1 MU,B1,3.30,Vial,81725,Penicillin G,exact,1516,Solution for injection,pinned
+BENZYLIN2,Benzylpenicillin,Injection,5 MU,B1,11.00,Vial,81725,Penicillin G,exact,1516,Solution for injection,pinned
+BETAXOID1,Betaxolol HCL,Eye Drops,0.5%,C,19.89,5 mL,72139,Betaxolol hydrochloride,pinned,160054,Eye solution,pinned
+BISACOTA1,Bisacodyl,Tablet,5 mg,B1,1.10,Tablet,72223,Bisacodyl,exact,1513,Tablet,pinned
+BISOPRTA1,Bisoprolol,Tablet,5 mg,B2,0.98,Tablet,72247,Bisoprolol,exact,1513,Tablet,pinned
+BISOPRTA2,Bisoprolol,Tablet,10 mg,B2,1.02,Tablet,72247,Bisoprolol,exact,1513,Tablet,pinned
+BUDESOGA1,Budesonide,Inhaler,100 microgram (100 Doses),B2,108.11,Inhaler,72484,Budesonide,exact,162423,Inhalation form,pinned
+BUDESOGA2,Budesonide,Inhaler,200 microgram (100 Doses),B2,212.78,Inhaler,72484,Budesonide,exact,162423,Inhalation form,pinned
+BUDFORGA1,Budesonide + Formoterol,Inhaler,80 microgram/4.5 microgram (60 Doses),B2,143.00,Inhaler,103955,Budesonide / formoterol,exact,162423,Inhalation form,pinned
+BUDFORGA2,Budesonide + Formoterol,Inhaler,160 microgram/4.5 microgram (60 Doses),B2,151.25,Inhaler,103955,Budesonide / formoterol,exact,162423,Inhalation form,pinned
+CALAMICR1,Calamine,Cream,15%,A,18.04,40 G,72621,Calamine,exact,162413,Cream,pinned
+CALAMILO1,Calamine,Lotion,15%,A,11.55,200 mL,72621,Calamine,exact,162427,Lotion,pinned
+CALCARTA1,Calcium Carbonate,Tablet,500 mg,B1,3.30,Tablet,72660,Calcium carbonate,exact,1513,Tablet,pinned
+CALGLUIN1,Calcium Gluconate,Injection,100 mg/mL in 10 mL,B2,29.70,Ampoule,72678,Calcium gluconate,exact,1516,Solution for injection,pinned
+CALVITTA1,Calcium with Vitamin D,Tablet,(97 mg + 10 microgram),M,1.47,Tablet,104053,Calcium carbonate / vitamin D,pinned,1513,Tablet,pinned
+CARBAMTA1,Carbamazepine,Tablet,100 mg,B2,1.21,Tablet,72822,Carbamazepine,exact,1513,Tablet,pinned
+CARBAMTA2,Carbamazepine,Tablet,200 mg,B2,1.05,Tablet,72822,Carbamazepine,exact,1513,Tablet,pinned
+CARBAMTA3,Carbamazepine Sustained-Release,Tablet,200 mg,C,2.92,Tablet,72822,Carbamazepine,pinned,1513,Tablet,pinned
+CARBAMTA4,Carbamazepine Sustained-Release,Tablet,400 mg,C,6.22,Tablet,72822,Carbamazepine,pinned,1513,Tablet,pinned
+CARBIMTA1,Carbimazole,Tablet,5 mg,C,1.16,Tablet,72848,Carbimazole,exact,1513,Tablet,pinned
+CARBIMTA2,Carbimazole,Tablet,20 mg,C,2.20,Tablet,72848,Carbimazole,exact,1513,Tablet,pinned
+CARBOCSY1,Carbocisteine Paediatric,Syrup,125 mg/5 mL,B1,14.30,100 mL,72861,Carbocysteine,pinned,1515,Syrup,pinned
+CARBOCSY2,Carbocisteine,Syrup,250 mg/5 mL,B1,11.06,100 mL,72861,Carbocysteine,exact,1515,Syrup,pinned
+CEFACLCA1,Cefaclor,Capsule,250 mg,B2,6.86,Capsule,72987,Cefaclor,exact,1608,Capsule,pinned
+CEFACLCA2,Cefaclor,Capsule,500 mg,B2,12.65,Capsule,72987,Cefaclor,exact,1608,Capsule,pinned
+CEFACLSU1,Cefaclor,Suspension,125 mg/5 mL,B2,40.15,100 mL,72987,Cefaclor,exact,162462,Suspension,pinned
+CEFACLSU2,Cefaclor,Suspension,250 mg/5 mL,B2,59.95,100 mL,72987,Cefaclor,exact,162462,Suspension,pinned
+CEFOTAIN1,Cefotaxime,Injection,500 mg,C,14.85,Vial,73018,Cefotaxime,exact,1516,Solution for injection,pinned
+CEFOTAIN2,Cefotaxime,Injection,1 g,C,20.20,Vial,73018,Cefotaxime,exact,1516,Solution for injection,pinned
+CEFTRIIN2,Ceftriazone,Injection,500 mg,C,8.80,Vial,73041,Ceftriaxone,pinned,1516,Solution for injection,pinned
+CEFTRIIN3,Ceftriazone,Injection,1g,C,13.20,Vial,73041,Ceftriaxone,pinned,1516,Solution for injection,pinned
+CEFUROIN1,Cefuroxime,Injection,750 mg,B2,13.20,Vial,73043,Cefuroxime,exact,1516,Solution for injection,pinned
+CEFUROIN2,Cefuroxime,Injection,1.5 g,B2,35.42,Vial,73043,Cefuroxime,exact,1516,Solution for injection,pinned
+CEFUROSU1,Cefuroxime,Suspension,125 mg/5 mL,B2,20.56,50mL,73043,Cefuroxime,exact,162462,Suspension,pinned
+CEFUROTA1,Cefuroxime,Tablet,125 mg,B2,4.29,Tablet,73043,Cefuroxime,exact,1513,Tablet,pinned
+CEFUROTA2,Cefuroxime,Tablet,250 mg,B2,2.17,Tablet,73043,Cefuroxime,exact,1513,Tablet,pinned
+CELECOTA1,Celecoxib,Tablet,100 mg,C,1.32,Tablet,73048,Celecoxib,exact,1513,Tablet,pinned
+CELECOTA2,Celecoxib,Tablet,200 mg,C,2.75,Tablet,73048,Celecoxib,exact,1513,Tablet,pinned
+CETIRISY1,Cetirizine,Syrup,5 mg/5 mL,B2,8.80,30 mL,73136,Cetirizine,exact,1515,Syrup,pinned
+CETIRITA1,Cetirizine,Tablet,10 mg,A,0.07,Tablet,73136,Cetirizine,exact,1513,Tablet,pinned
+CETRIMSO1,Cetrimide,Solution,,M,7.15,200 mL,73138,Cetrimide,exact,162461,Solution,pinned
+CHLORAED1,Chloramphenicol,Ear Drops,5%,A,6.88,10 mL,73239,Chloramphenicol,exact,162445,Ear solution,pinned
+CHLORAEO1,Chloramphenicol,Eye Ointment,1%,A,8.80,5 G,73239,Chloramphenicol,exact,1520,Ophthalmic ointment,pinned
+CHLORAID1,Chloramphenicol,Eye Drops,0.5%,A,6.38,10 mL,73239,Chloramphenicol,exact,160054,Eye solution,pinned
+CHLORAIN1,Chloramphenicol,Injection,1 g,C,1.65,1 G,73239,Chloramphenicol,exact,1516,Solution for injection,pinned
+CHLORASU1,Chloramphenicol,Suspension,125mg/5mL,B2,8.58,100 mL,73239,Chloramphenicol,exact,162462,Suspension,pinned
+CHLORHCR1,Chlorhexidine,Cream,1%,A,28.60,15 G,73263,Chlorhexidine,exact,162413,Cream,pinned
+CHLORHGE1,Chlorhexidine,Gel,7.1 % ( digluconate ) delivering 4% chlorhexidine,A,24.75,25g,73263,Chlorhexidine,exact,162420,Gel,pinned
+CHLORHMW2,Chlorhexidine,Mouth Wash,0.12%,A,22.69,300ml,73263,Chlorhexidine,exact,162768,Mucous membrane topical solution,pinned
+CHLORHSO1,Chlorhexidine,Solution,2.5%,A,75.13,100 mL,73263,Chlorhexidine,exact,162461,Solution,pinned
+CHLPHESY1,Chlorphenamine,Syrup,2 mg/5 mL,A,11.00,100 mL,913,Chlorphenamine,exact,1515,Syrup,pinned
+CHLPHETA1,Chlorphenamine,Tablet,4 mg,A,0.17,Tablet,913,Chlorphenamine,exact,1513,Tablet,pinned
+CHLPROIN1,Chlorpromazine,Injection,25 mg/mL in 2 mL,B2,7.70,Ampoule,73330,Chlorpromazine,exact,1516,Solution for injection,pinned
+CHLPROTA1,Chlorpromazine,Tablet,25 mg,B1,5.94,Tablet,73330,Chlorpromazine,exact,1513,Tablet,pinned
+CHLPROTA2,Chlorpromazine,Tablet,50 mg,B1,0.20,Tablet,73330,Chlorpromazine,exact,1513,Tablet,pinned
+CHLPROTA3,Chlorpromazine,Tablet,100 mg,B1,0.58,Tablet,73330,Chlorpromazine,exact,1513,Tablet,pinned
+CHREFLIN1,Cholera Replacement Fluid,Injection,(5:4:1) 500 mL,B1,10.98,500 mL,,,not-found,1516,Solution for injection,pinned
+CHREFLIN2,Cholera Replacement Fluid,Injection,(5:4:1) 1 Litre,B1,19.60,1000 mL,,,not-found,1516,Solution for injection,pinned
+CIPROFID1,Ciprofloxacin,Eye Drops,0.3%,B2,5.17,10 mL,73449,Ciprofloxacin,exact,160054,Eye solution,pinned
+CIPROFIN1,Ciprofloxacin,Infusion,2 mg/mL in 100 mL,B2,9.35,Bottle,73449,Ciprofloxacin,exact,1516,Solution for injection,pinned
+CIPROFTA1,Ciprofloxacin,Tablet,250 mg,B1,0.61,Tablet,73449,Ciprofloxacin,exact,1513,Tablet,pinned
+CIPROFTA2,Ciprofloxacin,Tablet,500 mg,B1,0.61,Tablet,73449,Ciprofloxacin,exact,1513,Tablet,pinned
+CIPTINTA1,Ciprofloxacin + Tinidazole,Tablet,500 mg + 500 mg,B2,2.85,Tablet,,,not-found,1513,Tablet,pinned
+CLARITCA1,Clarithromycin,Capsule,250 mg,C,3.08,Capsule,73498,Clarithromycin,exact,1608,Capsule,pinned
+CLARITCA2,Clarithromycin,Capsule,500 mg,C,5.50,Capsule,73498,Clarithromycin,exact,1608,Capsule,pinned
+CLARITSU1,Clarithromycin Paediatric,Suspension,125 mg/5 mL,C,110.28,100 mL,73498,Clarithromycin,pinned,162462,Suspension,pinned
+CLINDACA1,Clindamycin,Capsule,150 mg,C,0.77,Capsule,73546,Clindamycin,exact,1608,Capsule,pinned
+CLINDAIN1,Clindamycin,Injection,150 mg/mL in 2 mL,C,29.17,Vial,73546,Clindamycin,exact,1516,Solution for injection,pinned
+CLINDASO1,Clindamycin Topical,Solution,1%,C,100.10,30 mL,73546,Clindamycin,pinned,162461,Solution,pinned
+CLINDASU1,Clindamycin,Suspension,75 mg/5 mL,C,207.90,100 mL,73546,Clindamycin,exact,162462,Suspension,pinned
+CLOHYDCR1,Clotrimazole + Hydrocortisone,Cream,1% + 1%,C,16.50,15 G,104340,Clotrimazole / hydrocortisone,exact,162413,Cream,pinned
+CLOPROCR1,Clobetasol Propionate,Cream,0.05%,C,57.48,15 G,73565,Clobetasol propionate,exact,162413,Cream,pinned
+CLOTRICR1,Clotrimazole,Cream,1%,A,8.80,30 G,73624,Clotrimazole,exact,162413,Cream,pinned
+CLOTRICR2,Clotrimazole,Cream,2%,A,11.55,30 G,73624,Clotrimazole,exact,162413,Cream,pinned
+CLOTRIVP1,Clotrimazole,Pessary,100 mg,M,11.55,6 Pess.,73624,Clotrimazole,exact,162474,Vaginal suppository,pinned
+CLOTRIVP2,Clotrimazole,Pessary,200 mg,M,24.20,3 Pess.,73624,Clotrimazole,exact,162474,Vaginal suppository,pinned
+CLOTRIVP3,Clotrimazole,Pessary,500 mg,B1,21.01,1 Pess.,73624,Clotrimazole,exact,162474,Vaginal suppository,pinned
+CLOXACIN1,Cloxacillin,Injection,250 mg,B1,2.71,Vial,73628,Cloxacillin,exact,1516,Solution for injection,pinned
+CLOXACIN2,Cloxacillin,Injection,500 mg,B1,11.28,Vial,73628,Cloxacillin,exact,1516,Solution for injection,pinned
+COAMOXIN1,Amoxicillin + Clavulanic Acid,Injection,500 mg + 100 mg,B2,18.70,Vial,450,Amoxicillin and clavulanic acid,exact,1516,Solution for injection,pinned
+COAMOXIN2,Amoxicillin + Clavulanic Acid,Injection,1.2g,B2,16.30,Vial,450,Amoxicillin and clavulanic acid,exact,1516,Solution for injection,pinned
+COAMOXSU1,Amoxicillin + Clavulanic Acid,Suspension,250 mg + 62 mg,B1,19.52,70 mL,450,Amoxicillin and clavulanic acid,exact,162462,Suspension,pinned
+COAMOXSU2,Amoxicillin + Clavulanic Acid,Suspension,400 mg + 57 mg,B1,25.86,70 mL,450,Amoxicillin and clavulanic acid,exact,162462,Suspension,pinned
+COAMOXTA1,Amoxicillin + Clavulanic Acid,Tablet,500 mg + 125 mg,B1,2.31,Tablet,450,Amoxicillin and clavulanic acid,exact,1513,Tablet,pinned
+COAMOXTA2,Amoxicillin + Clavulanic Acid,Tablet,875 mg + 125 mg,B2,2.98,Tablet,450,Amoxicillin and clavulanic acid,exact,1513,Tablet,pinned
+CODEINTA1,Codeine,Tablet,30 mg,B2,1.80,Tablet,73667,Codeine,exact,1513,Tablet,pinned
+COOENOTA1,Conjugated Oestrogen + Norgesterol,Tablet,625 microgram + 150 microgram,C,3.77,Tablet,,,not-found,1513,Tablet,pinned
+CORANTEO1,Corticosteroid + Antibiotic,Eye Ointment,,C,53.90,10 G,,,not-found,1520,Ophthalmic ointment,pinned
+CORANTID1,Corticosteroid + Antibiotic,Eye Drops,,C,41.80,10 mL,,,not-found,160054,Eye solution,pinned
+COTRIMSU1,Co-trimoxazole,Suspension,(200+40) mg/5 mL,A,9.46,100 mL,105281,Sulfamethoxazole / trimethoprim,exact,162462,Suspension,pinned
+COTRIMTA1,Cotrimoxazole,Tablet,(400+80) mg,A,0.23,Tablet,105281,Sulfamethoxazole / trimethoprim,exact,1513,Tablet,pinned
+DARROWIN1,Darrow's,Solution,"Injection, Half Strength 250 mL",B1,8.71,250 mL,,,not-found,162461,Solution,pinned
+DESOCHIN1,Dextrose in Sodium Chloride Intravenous,Infusion,4.3% in 0.18% (250 mL),M,12.68,250 mL,162857,Dextrose 5% in normal saline,pinned,1516,Solution for injection,pinned
+DESOCHIN2,Dextrose in Sodium Chloride Intravenous,Infusion,5% in 0.9% (500 mL),M,12.93,500 mL,162857,Dextrose 5% in normal saline,pinned,1516,Solution for injection,pinned
+DEXAMEEO1,Dexamethasone,Eye Ointment,1%,C,42.63,5 G,74609,Dexamethasone,exact,1520,Ophthalmic ointment,pinned
+DEXAMEID1,Dexamethasone,Eye Drops,1%,C,8.84,5 mL,74609,Dexamethasone,exact,160054,Eye solution,pinned
+DEXAMEIN1,Dexamethasone,Injection,4 mg/mL,C,3.03,1mL,74609,Dexamethasone,exact,1516,Solution for injection,pinned
+DEXAMEIN2,Dexamethasone,Injection,8 mg/2 mL,C,2.20,2mL,74609,Dexamethasone,exact,1516,Solution for injection,pinned
+DEXTROIN1,Dextrose,Infusion,5% (250 mL),M,11.00,250 mL,74676,"Dextrose, anhydrous",pinned,1516,Solution for injection,pinned
+DEXTROIN2,Dextrose,Infusion,5% (500 mL),M,11.86,500 mL,74676,"Dextrose, anhydrous",pinned,1516,Solution for injection,pinned
+DEXTROIN3,Dextrose,Infusion,10% (250 mL),B1,9.65,250 mL,74676,"Dextrose, anhydrous",pinned,1516,Solution for injection,pinned
+DEXTROIN4,Dextrose,Infusion,10% (500 mL),B1,14.20,500 mL,74676,"Dextrose, anhydrous",pinned,1516,Solution for injection,pinned
+DEXTROIN6,Dextrose,Infusion,50% (250 mL),B1,17.42,250 mL,74676,"Dextrose, anhydrous",pinned,1516,Solution for injection,pinned
+DEXTROTA1,Dextromethorphan Containing Cough,Syrup,,B2,40.70,100ml,74666,Dextromethorphan,pinned,1515,Syrup,pinned
+DIAZEPIN1,Diazepam,Injection,5 mg/mL in 2 mL,B1,7.90,Ampoule,74745,Diazepam,exact,1516,Solution for injection,pinned
+DIAZEPRS1,Diazepam,Rectal Solution,2 mg/mL in 1.25 mL,A,5.50,Rectal Tube,74745,Diazepam,exact,162772,Rectal solution,pinned
+DIAZEPTA1,Diazepam,Tablet,5 mg,M,0.17,Tablet,74745,Diazepam,exact,1513,Tablet,pinned
+DIAZEPTA2,Diazepam,Tablet,10 mg,M,0.22,Tablet,74745,Diazepam,exact,1513,Tablet,pinned
+DICLOFCA1,Diclofenac,Capsule,75 mg,B1,0.40,Capsule,74778,Diclofenac,exact,1608,Capsule,pinned
+DICLOFGE1,Diclofenac,Gel,,M,5.41,30 G,74778,Diclofenac,exact,162420,Gel,pinned
+DICLOFIN1,Diclofenac,Injection,75mg/3mL,B1,1.10,Ampoule,74778,Diclofenac,exact,1516,Solution for injection,pinned
+DICLOFRE1,Diclofenac,Suppository,50 mg,A,1.71,Supp.,74778,Diclofenac,exact,162458,Rectal suppository,pinned
+DICLOFRE2,Diclofenac,Suppository,100 mg,M,0.96,Supp.,74778,Diclofenac,exact,162458,Rectal suppository,pinned
+DICLOFTA2,Diclofenac,Tablet,50 mg,A,0.13,Tablet,74778,Diclofenac,exact,1513,Tablet,pinned
+DIGOXIEL1,Digoxin,Elixir,50 microgram/mL,C,1.38,60 mL,74860,Digoxin,exact,162770,Oral solution,pinned
+DIGOXITA1,Digoxin,Tablet,62.5 microgram,C,1.03,Tablet,74860,Digoxin,exact,1513,Tablet,pinned
+DIGOXITA2,Digoxin,Tablet,125 microgram,C,1.71,Tablet,74860,Digoxin,exact,1513,Tablet,pinned
+DIGOXITA3,Digoxin,Tablet,250 microgram,C,1.98,Tablet,74860,Digoxin,exact,1513,Tablet,pinned
+DIHPIPPO1,Dihydroartemisin + Piperaquine Granular,Powder,10 mg + 80 mg,A,3.85,Sachet,162836,Dihydroartemisinin / piperaquine,pinned,162452,Powder,pinned
+DIHYDRTA1,Dihydrocodeine,Tablet,30 mg,C,0.72,Tablet,74874,Dihydrocodeine,exact,1513,Tablet,pinned
+DOXYCYCA1,Doxycycline,Capsule,100 mg,B1,0.92,Capsule,75222,Doxycycline,exact,1608,Capsule,pinned
+ENOSODIN2,Enoxaparin Sodium,Injection,40 mg/0.4 mL,B2,126.50,Prefilled Syringe,75688,Enoxaparin sodium,exact,1516,Solution for injection,pinned
+EPHEDRIN1,Ephedrine HCI,Injection,30 mg/mL,C,23.10,Ampoule,75722,Ephedrine hydrochloride,pinned,1516,Solution for injection,pinned
+EPHEDRND1,Ephedrine,Nasal Drops,0.5%,A,6.83,10 mL,75720,Ephedrine,exact,162432,Nasal solution,pinned
+EPHEDRND2,Ephedrine,Nasal Drops,1%,A,9.90,10 mL,75720,Ephedrine,exact,162432,Nasal solution,pinned
+ERGOMEIN1,Ergometrine,Injection,0.2 mg/mL,M,10.04,1 mL,75801,Ergonovine,exact,1516,Solution for injection,pinned
+ERGOMEIN2,Ergometrine,Injection,0.5 mg/ml,M,12.10,1 mL,75801,Ergonovine,exact,1516,Solution for injection,pinned
+ERGOMETA1,Ergometrine,Tablet,0.5 mg,A,0.66,Tablet,75801,Ergonovine,exact,1513,Tablet,pinned
+ERGOTATA1,Ergotamine,Tablet,2 mg,C,5.15,Tablet,75805,Ergotamine,exact,1513,Tablet,pinned
+ERYTHRSY1,Erythromycin,Syrup,125 mg/5 mL,B1,23.65,100 mL,75842,Erythromycin,exact,1515,Syrup,pinned
+ERYTHRTA1,Erythromycin,Tablet,250 mg,B1,1.10,Tablet,75842,Erythromycin,exact,1513,Tablet,pinned
+ESOMEPCA1,Esomeprazole,Capsule,20 mg,C,1.98,Capsule,75875,Esomeprazole,exact,1608,Capsule,pinned
+ESOMEPCA2,Esomeprazole,Capsule,40 mg,C,3.40,Capsule,75875,Esomeprazole,exact,1608,Capsule,pinned
+FEAMCISU1,Ferric Ammonium Citrate,Mixture,(FAC),A,7.48,200 mL,76305,Ferric ammonium citrate,exact,162770,Oral solution,pinned
+FERFUMTA1,Ferrous Fumarate,Tablet,100 mg (Elemental Iron),A,0.22,Tablet,76335,Ferrous fumarate,exact,1513,Tablet,pinned
+FERSULSY1,Ferrous Sulphate (BPC),Syrup,60 mg/5 mL,A,18.70,200 mL,76342,Ferrous sulfate,pinned,1515,Syrup,pinned
+FERSULTA1,Ferrous Sulphate,Tablet,60 mg (Elemental Iron),A,0.11,Tablet,76342,Ferrous sulfate,pinned,1513,Tablet,pinned
+FESUFOTA1,Ferrous Sulphate + Folic Acid,Tablet,50 mg (Elemental Iron) + 400 microgram,A,0.67,Tablet,773,Ferrous sulfate and folic acid,pinned,1513,Tablet,pinned
+FLUCLOCA1,Flucloxacillin,Capsule,250 mg,B2,0.82,Capsule,76464,Floxacillin,exact,1608,Capsule,pinned
+FLUCLOIN1,Flucloxacillin,Injection,250 mg,B2,10.18,Vial,76464,Floxacillin,exact,1516,Solution for injection,pinned
+FLUCLOIN2,Flucloxacillin,Injection,500 mg,B2,19.80,Vial,76464,Floxacillin,exact,1516,Solution for injection,pinned
+FLUCLOSU1,Flucloxacillin,Suspension,125 mg/5 mL,B1,15.95,100 mL,76464,Floxacillin,exact,162462,Suspension,pinned
+FLUCONCA1,Fluconazole,Capsule,150 mg,B1,10.67,Capsule,76488,Fluconazole,exact,1608,Capsule,pinned
+FLUCONCA2,Fluconazole,Capsule,200 mg,B2,8.80,Capsule,76488,Fluconazole,exact,1608,Capsule,pinned
+FLUCONSU1,Fluconazole,Suspension,10 mg/mL,B2,32.45,35 mL,76488,Fluconazole,exact,162462,Suspension,pinned
+FLUCONSU2,Fluconazole,Suspension,50 mg/5 mL,B2,50.00,35 mL,76488,Fluconazole,exact,162462,Suspension,pinned
+FLUCONTA1,Fluconazole,Tablet,50 mg,B2,27.72,Tablet,76488,Fluconazole,exact,1513,Tablet,pinned
+FLUOXECA1,Fluoxetine,Capsule,20 mg,C,1.43,Capsule,76552,Fluoxetine,exact,1608,Capsule,pinned
+FLUPENTA1,Flupentixol,Tablet,500 microgram,C,1.53,Tablet,76555,Flupentixol,exact,1513,Tablet,pinned
+FLUPENTA2,Flupentixol,Tablet,1mg,C,1.65,Tablet,76555,Flupentixol,exact,1513,Tablet,pinned
+FLUSALGA1,Fluticasone + Salmeterol,Inhaler,250 microgram/50 microgram (60 Doses),B2,275.00,Inhaler,104676,Fluticasone / salmeterol,exact,162423,Inhalation form,pinned
+FLUTICGA2,Fluticasone,Inhaler,125 microgram (120 Dose),B2,191.73,Inhaler,76586,Fluticasone,exact,162423,Inhalation form,pinned
+FLUTICGA3,Fluticasone,Inhaler,250 microgram (120 Dose),B2,128.70,Inhaler,76586,Fluticasone,exact,162423,Inhalation form,pinned
+FOLACITA1,Folic Acid,Tablet,5 mg,A,0.05,Tablet,76613,Folic acid,exact,1513,Tablet,pinned
+FUROSEIN1,Furosemide,Injection,10 mg/mL in 2 mL,B2,1.56,Ampoule,76734,Furosemide,exact,1516,Solution for injection,pinned
+FUROSETA1,Furosemide,Tablet,40 mg,B1,0.28,Tablet,76734,Furosemide,exact,1513,Tablet,pinned
+GELATIIN1,Gelatin,Infusion,(Succinylated Gelatin),B2,82.61,500 mL,84388,Succinylated gelatin,pinned,1516,Solution for injection,pinned
+GENTAMED1,Gentamicin,Ear Drops,0.3%,B1,6.62,10mL,100,Gentamicin,exact,162445,Ear solution,pinned
+GENTAMID1,Gentamicin,Eye Drops,0.3%,B1,6.60,10 mL,100,Gentamicin,exact,160054,Eye solution,pinned
+GENTAMIN1,Gentamicin,Injection,40 mg/mL in 2 mL,C,2.75,Ampoule,100,Gentamicin,exact,1516,Solution for injection,pinned
+GLIBENTA1,Glibenclamide,Tablet,5 mg,B1,0.15,Tablet,77071,Glyburide,exact,1513,Tablet,pinned
+GLICLATA1,Gliclazide,Tablet,80 mg,C,0.66,Tablet,77029,Gliclazide,exact,1513,Tablet,pinned
+GLIMEPTA1,Glimepiride,Tablet,1 mg,C,1.10,Tablet,77031,Glimepiride,exact,1513,Tablet,pinned
+GLIMEPTA2,Glimepiride,Tablet,2 mg,C,0.19,Tablet,77031,Glimepiride,exact,1513,Tablet,pinned
+GLIMEPTA3,Glimepiride,Tablet,3 mg,C,1.57,Tablet,77031,Glimepiride,exact,1513,Tablet,pinned
+GLIMEPTA4,Glimepiride,Tablet,4 mg,C,0.24,Tablet,77031,Glimepiride,exact,1513,Tablet,pinned
+GLTRSUTA1,Glyceryl Trinitrate Sublingual,Tablet,500 microgram,C,121.63,100 Tablets,80704,Nitroglycerin,pinned,1513,Tablet,pinned
+GLUCAGIN1,Glucagon,Injection,1 mg,C,455.40,Ampoule,77037,Glucagon,exact,1516,Solution for injection,pinned
+GRISEOSU1,Griseofulvin,Suspension,125 mg/5 mL,B2,29.26,100 mL,77164,Griseofulvin,exact,162462,Suspension,pinned
+GRISEOTA1,Griseofulvin,Tablet,125 mg,B1,0.35,Tablet,77164,Griseofulvin,exact,1513,Tablet,pinned
+GRISEOTA2,Griseofulvin,Tablet,500 mg,B1,2.20,Tablet,77164,Griseofulvin,exact,1513,Tablet,pinned
+GUAIFESY1,Guaifenesin Containing Expectorant,Syrup,,B2,34.93,100ml,77204,Guaifenesin,pinned,1515,Syrup,pinned
+HALOPETA1,Haloperidol,Tablet,0.5 mg,C,0.95,Tablet,77335,Haloperidol,exact,1513,Tablet,pinned
+HALOPETA2,Haloperidol,Tablet,5 mg,C,1.41,Tablet,77335,Haloperidol,exact,1513,Tablet,pinned
+HALOPETA3,Haloperidol,Tablet,10 mg,C,1.65,Tablet,77335,Haloperidol,exact,1513,Tablet,pinned
+HUIMTEIN1,Human Immune Tetanus Globulins,Injection,250 IU/mL,B1,42.85,1 mL,84878,"Tetanus immune globulin, human",pinned,1516,Solution for injection,pinned
+HUIMTEIN2,Human Immune Tetanus Globulins,Injection,500 IU/mL,B1,42.85,2 mL,84878,"Tetanus immune globulin, human",pinned,1516,Solution for injection,pinned
+HYDRALIN1,Hydralazine,Injection,20 mg,C,26.95,Ampoule,77675,Hydralazine,exact,1516,Solution for injection,pinned
+HYDRALTA1,Hydralazine,Tablet,25 mg,B2,3.25,Tablet,77675,Hydralazine,exact,1513,Tablet,pinned
+HYDROCCR1,Hydrocortisone,Cream,1%,B1,12.06,15 G,77714,Hydrocortisone,exact,162413,Cream,pinned
+HYDROCEO1,Hydrocortisone,Eye Ointment,1%,C,13.86,5 G,77714,Hydrocortisone,exact,1520,Ophthalmic ointment,pinned
+HYDROCID1,Hydrocortisone,Eye Drops,1%,C,16.50,5 mL,77714,Hydrocortisone,exact,160054,Eye solution,pinned
+HYOBUTIN1,Hyoscine Butylbromide,Injection,20 mg/ mL,M,6.60,1 mL,431,Hyoscine butylbromide,exact,1516,Solution for injection,pinned
+HYOBUTTA1,Hyoscine Butylbromide,Tablet,10 mg,M,0.99,Tablet,431,Hyoscine butylbromide,exact,1513,Tablet,pinned
+HYSOSUIN1,Hydrocortisone Sodium Succinate,Injection,100 mg,M,11.00,Vial,77725,Hydrocortisone sodium succinate,exact,1516,Solution for injection,pinned
+IBUPROSU1,Ibuprofen,Suspension,100 mg/5 mL,A,12.65,100 mL,77897,Ibuprofen,exact,162462,Suspension,pinned
+IBUPROTA1,Ibuprofen,Tablet,200 mg,A,0.22,Tablet,77897,Ibuprofen,exact,1513,Tablet,pinned
+IBUPROTA2,Ibuprofen,Tablet,400 mg,A,0.28,Tablet,77897,Ibuprofen,exact,1513,Tablet,pinned
+IMIPRATA1,Imipramine,Tablet,25 mg,C,0.33,Tablet,77953,Imipramine,exact,1513,Tablet,pinned
+INPRMIIN1,Insulin premixed (30/70) HM,Injection,"Injection, 100 units/mL in 10 mL",C,84.42,Vial,159459,Insulin 70/30,pinned,1516,Solution for injection,pinned
+INSSOLIN1,Insulin Soluble HM,Injection,100 units/mL in 10 mL,C,80.87,Vial,282,"Insulin, regular",pinned,1516,Solution for injection,pinned
+IPRBROGA1,Ipratropium Bromide,Nebuliser Solution,250 micrograms,B2,11.00,Dose,78200,Ipratropium bromide,exact,162425,Inhalation solution,pinned
+IPRBROGA2,Ipratropium Bromide,Nebuliser Solution,500 micrograms,B2,14.30,Dose,78200,Ipratropium bromide,exact,162425,Inhalation solution,pinned
+IRODEXIN1,Iron Dextran,Injection,100mg/2mL,C,27.50,2 mL,78230,Iron-dextran complex,pinned,1516,Solution for injection,pinned
+IROPOLCA1,Iron (III) Polymaltose Complex,Capsule,,M,0.28,Capsule,,,not-found,1608,Capsule,pinned
+IROPOLSU1,Iron (III) Polymaltose Complex,Suspension,,M,9.75,200 mL,,,not-found,162462,Suspension,pinned
+ISODINTA1,Isosorbide Dinitrate,Tablet,10 mg,C,1.97,Tablet,78305,Isosorbide dinitrate,exact,1513,Tablet,pinned
+ISOINSIN1,Isophane Insulin,Injection,"(HM), 100 units/mL in 10 mL",C,100.10,Vial,78068,"Insulin, isophane, human",pinned,1516,Solution for injection,pinned
+KETOCOCR1,Ketoconazole,Cream,30g,B1,22.00,Tube,78476,Ketoconazole,exact,162413,Cream,pinned
+KETOCOTA1,Ketoconazole,Tablet,200 mg,C,8.50,Tablet,78476,Ketoconazole,exact,1513,Tablet,pinned
+LABETATA2,Labetalol,Tablet,200 mg,B2,4.40,Tablet,78599,Labetalol,exact,1513,Tablet,pinned
+LACTULLI1,Lactulose,Liquid,3.1–3.7 g/5 mL,C,75.35,300 mL,78632,Lactulose,exact,162770,Oral solution,pinned
+LEVSODTA1,Levothyroxine Sodium,Tablet,25 microgram,C,0.92,Tablet,78809,Levothyroxine sodium,exact,1513,Tablet,pinned
+LEVSODTA2,Levothyroxine Sodium,Tablet,50 microgram,C,1.10,Tablet,78809,Levothyroxine sodium,exact,1513,Tablet,pinned
+LEVSODTA3,Levothyroxine Sodium,Tablet,100 microgram,C,1.32,Tablet,78809,Levothyroxine sodium,exact,1513,Tablet,pinned
+LIDOCACR1,Lidocaine,Cream,2%,M,38.50,15 G,78849,Lidocaine,exact,162413,Cream,pinned
+LIDOCAGE1,Lidocaine,Gel,4%,M,76.67,15 G,78849,Lidocaine,exact,162420,Gel,pinned
+LISHYDTA1,Lisinopril + Hydrochlorthiazide,Tablet,(10 mg + 12.5 mg),C,1.26,Tablet,104833,Hydrochlorothiazide / lisinopril,pinned,1513,Tablet,pinned
+LISHYDTA2,Lisinopril + Hydrochlorthiazide,Tablet,(20 mg + 12.5 mg),C,2.57,Tablet,104833,Hydrochlorothiazide / lisinopril,pinned,1513,Tablet,pinned
+LISINOTA1,Lisinopril,Tablet,2.5 mg,B2,0.47,Tablet,78945,Lisinopril,exact,1513,Tablet,pinned
+LISINOTA2,Lisinopril,Tablet,5 mg,B2,0.39,Tablet,78945,Lisinopril,exact,1513,Tablet,pinned
+LISINOTA3,Lisinopril,Tablet,10 mg,B2,0.21,Tablet,78945,Lisinopril,exact,1513,Tablet,pinned
+LISINOTA4,Lisinopril,Tablet,20 mg,B2,0.90,Tablet,78945,Lisinopril,exact,1513,Tablet,pinned
+LODOXAID1,Lodoxamide,Eye Drops,0.1%,C,8.90,10 mL,78994,Lodoxamide,exact,160054,Eye solution,pinned
+LORAZETA1,Lorazepam,Tablet,1 mg,B2,1.76,Tablet,79054,Lorazepam,exact,1513,Tablet,pinned
+LORAZETA2,Lorazepam,Tablet,2 mg,B2,0.44,Tablet,79054,Lorazepam,exact,1513,Tablet,pinned
+LOSARTTA1,Losartan,Tablet,25 mg,C,1.32,Tablet,79074,Losartan,exact,1513,Tablet,pinned
+LOSARTTA2,Losartan,Tablet,50 mg,C,0.26,Tablet,79074,Losartan,exact,1513,Tablet,pinned
+LOSARTTA3,Losartan,Tablet,100 mg,C,0.54,Tablet,79074,Losartan,exact,1513,Tablet,pinned
+MAGSULIN1,Magnesium Sulphate,Injection,20% (10 mL),M,5.96,Ampoule,79247,Magnesium sulfate,pinned,1516,Solution for injection,pinned
+MAGSULIN3,Magnesium Sulphate,Injection,50% (10 mL),M,19.54,Ampoule,79247,Magnesium sulfate,pinned,1516,Solution for injection,pinned
+MAGSULPO1,Magnesium Sulphate,Powder,,B2,33.00,1 G,79247,Magnesium sulfate,pinned,162452,Powder,pinned
+MAGTRIMI1,Magnesium Trisilicate,Mixture,,A,7.70,200 mL,79250,Magnesium trisilicate,exact,162770,Oral solution,pinned
+MAGTRITA1,Magnesium Trisilicate,Tablet,500 mg,A,3.58,Tablet,79250,Magnesium trisilicate,exact,1513,Tablet,pinned
+MANNITIN1,Mannitol,Injection,10%,C,36.04,500 mL,79303,Mannitol,exact,1516,Solution for injection,pinned
+MANNITIN2,Mannitol,Injection,20%,C,30.42,500 mL,79303,Mannitol,exact,1516,Solution for injection,pinned
+MATRALMI1,Magnesium Trisilicate + Aluminium Hydroxide,Mixture,,A,22.22,200 mL,103529,Aluminum hydroxide / magnesium trisilicate,pinned,162770,Oral solution,pinned
+MATRALTA1,Magnesium Trisilicate + Aluminium Hydroxide,Tablet,,A,0.22,Tablet,103529,Aluminum hydroxide / magnesium trisilicate,pinned,1513,Tablet,pinned
+MEBENDSU1,Mebendazole,Suspension,100 mg/5 mL,A,44.00,30 mL,79413,Mebendazole,exact,162462,Suspension,pinned
+MEBENDTA1,Mebendazole,Tablet,100 mg,A,14.30,6 Tablets,79413,Mebendazole,exact,1513,Tablet,pinned
+MEBENDTA2,Mebendazole,Tablet,500 mg,A,23.10,Tablet,79413,Mebendazole,exact,1513,Tablet,pinned
+MEBEVETA1,Mebeverine,Tablet,135 mg,C,1.50,Tablet,79414,Mebeverine,exact,1513,Tablet,pinned
+MEFACICA1,Mefenamic Acid,Capsule,250 mg,M,2.70,Capsule,79501,Mefenamic acid,exact,1608,Capsule,pinned
+MEFACITA1,Mefenamic Acid,Tablet,500 mg,M,1.29,Tablet,79501,Mefenamic acid,exact,1513,Tablet,pinned
+METCELID1,Methyl Cellulose,Eye Drops,0.3%,C,22.55,10 mL,79720,Methylcellulose,pinned,160054,Eye solution,pinned
+METFORTA1,Metformin,Tablet,500 mg,B1,0.15,Tablet,79651,Metformin,exact,1513,Tablet,pinned
+METHYLTA1,Methyldopa,Tablet,250 mg,M,0.93,Tablet,79723,Methyldopa,exact,1513,Tablet,pinned
+METOCLIN1,Metoclopramide,Injection,5 mg/mL in 2 mL,C,8.80,Ampoule,79755,Metoclopramide,exact,1516,Solution for injection,pinned
+METOCLSY1,Metoclopramide,Syrup,5 mg/5 mL,C,92.40,200 mL,79755,Metoclopramide,exact,1515,Syrup,pinned
+METOCLTA1,Metoclopramide,Tablet,10 mg,B2,0.77,Tablet,79755,Metoclopramide,exact,1513,Tablet,pinned
+METRONIN1,Metronidazole,Injection,5 mg/mL in 100 mL,B1,9.01,Bottle,79782,Metronidazole,exact,1516,Solution for injection,pinned
+METRONRE1,Metronidazole,Suppository,500 mg,B2,15.95,Supp.,79782,Metronidazole,exact,162458,Rectal suppository,pinned
+METRONSU1,Metronidazole,Suspension,100 mg/5 mL (as benzoate),A,10.92,100 mL,79782,Metronidazole,exact,162462,Suspension,pinned
+METRONSU2,Metronidazole,Suspension,200 mg/5 mL(as benzoate),A,12.02,100 mL,79782,Metronidazole,exact,162462,Suspension,pinned
+METRONTA1,Metronidazole,Tablet,200 mg,A,0.13,Tablet,79782,Metronidazole,exact,1513,Tablet,pinned
+METRONTA2,Metronidazole,Tablet,400 mg,A,0.25,Tablet,79782,Metronidazole,exact,1513,Tablet,pinned
+METTARTA1,Metoprolol Tartrate,Tablet,100 mg,C,1.85,Tablet,79767,Metoprolol tartrate,exact,1513,Tablet,pinned
+MICHYDCR1,Miconazole + Hydrocortisone,Cream,2% + 1%,C,51.87,15 G,104860,Hydrocortisone / miconazole,exact,162413,Cream,pinned
+MICONACR1,Miconazole,Cream,2%,B2,38.50,15 G,79831,Miconazole,exact,162413,Cream,pinned
+MICONAOG1,Miconazole,Oral Gel,25 mg/mL,B2,73.70,40 G,79831,Miconazole,exact,162441,Oral gel,pinned
+MICONAVP1,Miconazole,Pessary,400 mg,A,46.20,3 Ovules,79831,Miconazole,exact,162474,Vaginal suppository,pinned
+MIDAZOIN1,Midazolam,Injection,5 mg/5mL,C,70.13,Ampoule,79853,Midazolam,exact,1516,Solution for injection,pinned
+MIDAZOTA1,Midazolam,Tablet,15 mg,B2,13.89,Tablet,79853,Midazolam,exact,1513,Tablet,pinned
+MORPHIIN1,Morphine,Injection,10 mg/mL,B2,21.97,Ampoule,80106,Morphine,exact,1516,Solution for injection,pinned
+MORSULTA1,Morphine Sulphate,Tablet,10 mg (Slow release),B2,5.61,Tablet,80109,Morphine sulfate,pinned,1513,Tablet,pinned
+MORSULTA2,Morphine Sulphate,Tablet,30 mg (Slow release),B2,8.83,Tablet,80109,Morphine sulfate,pinned,1513,Tablet,pinned
+MULTIVDR1,Multivitamin,Drops,,A,24.20,20 mL,461,Multivitamin,exact,162770,Oral solution,pinned
+MULTIVSY1,Multivitamin,Syrup,,A,8.10,125 mL,461,Multivitamin,exact,1515,Syrup,pinned
+MULTIVTA1,Multivitamin,Tablet,,A,0.07,Tablet,461,Multivitamin,exact,1513,Tablet,pinned
+NALOXOIN1,Naloxone,Injection,400 microgram/mL in 1mL,C,28.55,Ampoule,80367,Naloxone,exact,1516,Solution for injection,pinned
+NEOMYCTA1,Neomycin,Tablet,500 mg,C,55.00,Tablet,80514,Neomycin,exact,1513,Tablet,pinned
+NEOSTIIN1,Neostigmine,Injection,2.5 mg/mL,C,27.50,Ampoule,80532,Neostigmine,exact,1516,Solution for injection,pinned
+NIFEDITA1,Nifedipine,Tablet,10 mg (slow release),B2,1.10,Tablet,80637,Nifedipine,exact,1513,Tablet,pinned
+NIFEDITA2,Nifedipine,Tablet,20 mg (slow release),B2,0.20,Tablet,80637,Nifedipine,exact,1513,Tablet,pinned
+NIFEDITA3,Nifedipine,Tablet,30 mg (GITS),B2,0.30,Tablet,80637,Nifedipine,exact,1513,Tablet,pinned
+NITROFTA1,Nitrofurantoin,Tablet,100 mg,B2,4.18,Tablet,80696,Nitrofurantoin,exact,1513,Tablet,pinned
+NYSTATOI1,Nystatin,Ointment,"100,000 IU",B2,25.74,30 G,80945,Nystatin,exact,162776,Topical ointment,pinned
+NYSTATSU1,Nystatin,Suspension,"100,000 IU/mL",B1,71.17,15 mL,80945,Nystatin,exact,162462,Suspension,pinned
+NYSTATTA1,Nystatin,Pessary,"100,000 IU",B1,52.71,Pessary,80945,Nystatin,exact,162474,Vaginal suppository,pinned
+NYSTATTA2,Nystatin,Tablet,"500,000 IU",B1,36.14,Tablet,80945,Nystatin,exact,1513,Tablet,pinned
+OMEPRAIN2,Omeprazole,Injection,40 mg,B2,19.80,Vial,81041,Omeprazole,exact,1516,Solution for injection,pinned
+OMEPRATA1,Omeprazole,Tablet,20 mg,B1,0.23,Tablet,81041,Omeprazole,exact,1513,Tablet,pinned
+ORRESAPO1,Oral Rehydration Salts,Powder,,A,1.47,Sachet,351,Oral rehydration salts,exact,162452,Powder,pinned
+OXYTOCIN1,Oxytocin,Injection,5 units/mL,M,16.47,Ampoule,81369,Oxytocin,exact,1516,Solution for injection,pinned
+OXYTOCIN2,Oxytocin,Injection,10 units/mL,M,10.19,Ampoule,81369,Oxytocin,exact,1516,Solution for injection,pinned
+PARACERE1,Paracetamol,Suppository,125 mg,A,1.50,Supp,70116,Acetaminophen,exact,162458,Rectal suppository,pinned
+PARACERE2,Paracetamol,Suppository,250 mg,A,2.34,Supp,70116,Acetaminophen,exact,162458,Rectal suppository,pinned
+PARACERE3,Paracetamol,Suppository,500 mg,A,2.41,Supp,70116,Acetaminophen,exact,162458,Rectal suppository,pinned
+PARACESY1,Paracetamol,Syrup,120 mg/5 mL,A,8.50,125 mL,70116,Acetaminophen,exact,1515,Syrup,pinned
+PARACETA1,Paracetamol,Tablet,500 mg,A,0.12,Tablet,70116,Acetaminophen,exact,1513,Tablet,pinned
+PARAFFLI1,Paraffin,Liquid,,A,25.30,100 mL,81568,Paraffin,exact,162770,Oral solution,pinned
+PETHIDIN1,Pethidine,Injection,50 mg/mL in 2 mL,B2,39.56,Ampoule,79574,Meperidine,exact,1516,Solution for injection,pinned
+PHENOBEL1,Phenobarbital,Elixir,15 mg/5 mL,B1,60.50,100 mL,81951,Phenobarbital,exact,162770,Oral solution,pinned
+PHENOBIN1,Phenobarbital,Injection,200 mg/mL,B1,34.58,Ampoule,81951,Phenobarbital,exact,1516,Solution for injection,pinned
+PHENOBTA1,Phenobarbital,Tablet,30 mg,B1,0.22,Tablet,81951,Phenobarbital,exact,1513,Tablet,pinned
+PHENOBTA2,Phenobarbital,Tablet,60 mg,B1,0.33,Tablet,81951,Phenobarbital,exact,1513,Tablet,pinned
+PHENYTCA2,Phenytoin Sodium,Capsule,100 mg,B1,1.54,Capsule,82024,Phenytoin sodium,exact,1608,Capsule,pinned
+PHENYTTA1,Phenytoin Sodium,Tablet,100 mg,B1,1.32,Tablet,82024,Phenytoin sodium,exact,1513,Tablet,pinned
+PHEPENTA1,Phenoxymethyl Penicillin,Tablet,250 mg,B1,0.84,Tablet,81730,Penicillin V,pinned,1513,Tablet,pinned
+PHYTOMIN1,Phytomenadione,Injection,1 mg/mL (Paediatric),M,6.93,Ampoule,86353,Vitamin K 1,exact,1516,Solution for injection,pinned
+PHYTOMIN2,Phytomenadione,Injection,10 mg/mL,M,12.10,Ampoule,86353,Vitamin K 1,exact,1516,Solution for injection,pinned
+PILOCAID1,Pilocarpine,Eye Drops,2%,C,35.75,10 mL,82082,Pilocarpine,exact,160054,Eye solution,pinned
+PILOCAID2,Pilocarpine,Eye Drops,4%,C,19.25,10 mL,82082,Pilocarpine,exact,160054,Eye solution,pinned
+PIOGLITA1,Pioglitazone,Tablet,15 mg,C,0.74,Tablet,82111,Pioglitazone,exact,1513,Tablet,pinned
+PIOGLITA2,Pioglitazone,Tablet,30 mg,C,0.91,Tablet,82111,Pioglitazone,exact,1513,Tablet,pinned
+PIRACETA1,Piracetam,Tablet,800 mg,C,5.50,Tablet,82147,Piracetam,exact,1513,Tablet,pinned
+POTCHLIN1,Potassium Chloride,Injection,20 mEq/10 mL,C,17.16,Vial,82350,Potassium chloride,exact,1516,Solution for injection,pinned
+POTCHLTA1,Potassium Chloride,Tablet,600 mg (Enteric Coated),B1,3.85,Tablet,82350,Potassium chloride,exact,1513,Tablet,pinned
+POTCITMI1,Potassium Citrate,Mixture,BP,A,9.35,200 mL,82353,Potassium citrate,exact,162770,Oral solution,pinned
+POVIDOOI1,Povidone Iodine,Ointment,10%,A,28.88,10 G,82384,Povidone-iodine,pinned,162776,Topical ointment,pinned
+POVIDOSO1,Povidone Iodine Aqueous,Solution,10%,A,46.20,100 mL,82384,Povidone-iodine,pinned,162461,Solution,pinned
+PRAZIQTA1,Praziquantel,Tablet,600 mg,B1,11.55,Tablet,82416,Praziquantel,exact,1513,Tablet,pinned
+PREDNIDT1,Prednisolone,Dispersible Tablet,5mg,B1,0.28,Tablet,82446,Prednisolone,exact,162415,Disintegrating tablet,pinned
+PREDNISY1,Prednisolone,Oral Solution,5mg/5ml,B1,62.70,60ml,82446,Prednisolone,exact,162770,Oral solution,pinned
+PREDNITA1,Prednisolone,Tablet,5 mg,B2,0.20,Tablet,82446,Prednisolone,exact,1513,Tablet,pinned
+PRIMIDTA1,Primidone,Tablet,250 mg,C,0.33,Tablet,82534,Primidone,exact,1513,Tablet,pinned
+PROBENIN1,Procaine Benzylpenicillin,Injection,4 MU,B2,9.90,Vial,81729,"Penicillin G, procaine",pinned,1516,Solution for injection,pinned
+PROHYDEL1,Promethazine Hydrochloride,Elixir,5 mg/5 mL,A,9.21,60 mL,82670,Promethazine hydrochloride,exact,162770,Oral solution,pinned
+PROHYDIN1,Promethazine Hydrochloride,Injection,25 mg/mL in 2 mL,B1,2.20,Ampoule,82670,Promethazine hydrochloride,exact,1516,Solution for injection,pinned
+PROMETTA1,Promethazine Hydrochloride,Tablet,25 mg,A,0.28,Tablet,82670,Promethazine hydrochloride,exact,1513,Tablet,pinned
+PROPRATA1,Propranolol,Tablet,10 mg,B2,0.84,Tablet,82732,Propranolol,exact,1513,Tablet,pinned
+PROPRATA2,Propranolol,Tablet,40 mg,B2,0.22,Tablet,82732,Propranolol,exact,1513,Tablet,pinned
+PROPRATA3,Propranolol,Tablet,80 mg,B2,1.88,Tablet,82732,Propranolol,exact,1513,Tablet,pinned
+PROTHETA1,Promethazine Theoclate,Tablet,25 mg,M,0.22,Tablet,82667,Promethazine,pinned,1513,Tablet,pinned
+QUINININ1,Quinine,Injection,300 mg/mL in 2 mL,B2,4.68,Ampoule,83023,Quinine,exact,1516,Solution for injection,pinned
+QUININSY1,Quinine,Syrup,75 mg/5 mL,B1,12.10,125 mL,83023,Quinine,exact,1515,Syrup,pinned
+QUININTA1,Quinine,Tablet,300 mg,M,1.47,Tablet,83023,Quinine,exact,1513,Tablet,pinned
+RAMIPRTA1,Ramipril,Tablet,2.5 mg,C,1.01,Tablet,83067,Ramipril,exact,1513,Tablet,pinned
+RAMIPRTA2,Ramipril,Tablet,5 mg,C,1.22,Tablet,83067,Ramipril,exact,1513,Tablet,pinned
+RANITITA1,Ranitidine,Tablet,150 mg,B2,1.99,Tablet,83075,Ranitidine,exact,1513,Tablet,pinned
+RETSOFCA2,Retinol Soft,Capsule,"200,000 IU",A,0.24,Capsule,86339,Vitamin A,pinned,1608,Capsule,pinned
+RINLACSO1,Ringer - Lactate,Solution,500 mL,M,13.10,500 mL,78617,Ringer's lactate,pinned,162461,Solution,pinned
+SALACIOI1,Salicylic Acid,Ointment,2%,B1,18.70,40G,83645,Salicylic acid,exact,162776,Topical ointment,pinned
+SALBUTGA1,Salbutamol,Inhaler,"100 microgram/metered dose, 200 doses",A,49.50,Inhaler,798,Salbutamol,exact,162423,Inhalation form,pinned
+SALBUTGA2,Salbutamol,Nebuliser Solution,2.5 mg,B1,10.12,Dose,798,Salbutamol,exact,162425,Inhalation solution,pinned
+SALBUTGA3,Salbutamol,Nebuliser Solution,5 mg,B1,17.60,Dose,798,Salbutamol,exact,162425,Inhalation solution,pinned
+SALBUTSY1,Salbutamol,Syrup,2 mg/5 mL,B1,18.70,200 mL,798,Salbutamol,exact,1515,Syrup,pinned
+SALSULIN1,Salbutamol Sulphate,Injection,500 microgram/mL in 1mL,B2,16.50,Ampoule,798,Salbutamol,pinned,1516,Solution for injection,pinned
+SECNIDTA1,Secnidazole,Tablet,500 mg,B2,8.80,Tablet,83751,Secnidazole,exact,1513,Tablet,pinned
+SELSULSH1,Selenium Sulphide,Shampoo,2.5%,C,12.93,50 mL,83774,Selenium disulfide,pinned,162459,Shampoo,pinned
+SILSULCR1,Silver Sulphadiazine,Cream,1%,A,26.40,50 G,83920,Silver sulfadiazine,pinned,162413,Cream,pinned
+SIMLINSY1,Simple Linctus,Syrup,BPC (Paediatric),A,6.97,125mL,,,not-found,1515,Syrup,pinned
+SIMLINSY2,Simple Linctus,Syrup,BPC,A,7.54,200mL,,,not-found,1515,Syrup,pinned
+SIMVASTA1,Simvastatin,Tablet,10 mg,C,0.66,Tablet,83936,Simvastatin,exact,1513,Tablet,pinned
+SIMVASTA2,Simvastatin,Tablet,20 mg,C,1.02,Tablet,83936,Simvastatin,exact,1513,Tablet,pinned
+SIMVASTA3,Simvastatin,Tablet,40 mg,C,1.27,Tablet,83936,Simvastatin,exact,1513,Tablet,pinned
+SOANSTOI1,Soothing Agent + Local Anaesthetic + Steroid,Ointment,,B1,85.80,15 G,,,not-found,162776,Topical ointment,pinned
+SOANSTRE1,Soothing Agent + Local Anaesthetic + Steroid,Suppository,,B1,7.70,Supp,,,not-found,162458,Rectal suppository,pinned
+SODBICIN1,Sodium Bicarbonate,Injection,8.4% in 10 mL,C,50.05,Ampoule,84041,Sodium bicarbonate,exact,1516,Solution for injection,pinned
+SODCHLIN1,Sodium Chloride,Infusion,0.45% (250 mL),B1,48.38,250 mL,84047,Sodium chloride,exact,1516,Solution for injection,pinned
+SODCHLIN3,Sodium Chloride,Infusion,0.9% (500 mL),M,14.37,500 mL,84047,Sodium chloride,exact,1516,Solution for injection,pinned
+SODCHLND1,Sodium Chloride,Nasal Drops,0.9%,A,6.60,10 mL,84047,Sodium chloride,exact,162432,Nasal solution,pinned
+SOOANAOI1,Soothing Agent + Local Anaesthetic,Ointment,,M,42.46,15 G,,,not-found,162776,Topical ointment,pinned
+SOOANARE1,Soothing Agent + Local Anaesthetic,Suppository,,M,6.93,Supp,,,not-found,162458,Rectal suppository,pinned
+SPIRONTA1,Spironolactone,Tablet,25 mg,C,1.10,Tablet,84239,Spironolactone,exact,1513,Tablet,pinned
+SPIRONTA2,Spironolactone,Tablet,50 mg,C,1.45,Tablet,84239,Spironolactone,exact,1513,Tablet,pinned
+TETRACCA1,Tetracycline,Capsule,250 mg,B1,0.28,Capsule,84893,Tetracycline,exact,1608,Capsule,pinned
+TETRACEO2,Tetracycline,Eye Ointment,1%,M,8.25,5 G,84893,Tetracycline,exact,1520,Ophthalmic ointment,pinned
+THEOPHTA1,Theophylline,Tablet,200 mg (slow release),B2,16.50,Tablet,84949,Theophylline,exact,1513,Tablet,pinned
+THIAMIIN1,Thiamine,Injection,100mg/2mL,C,11.00,Ampoule,84995,Thiamine,exact,1516,Solution for injection,pinned
+THIAMITA1,Thiamine,Tablet,50 mg,C,0.66,Tablet,84995,Thiamine,exact,1513,Tablet,pinned
+THIAMITA2,Thiamine,Tablet,100 mg,C,1.10,Tablet,84995,Thiamine,exact,1513,Tablet,pinned
+TIABENTA1,Tiabendazole,Tablet,500 mg,B1,1.58,Tablet,84994,Thiabendazole,pinned,1513,Tablet,pinned
+TIMMALID1,Timolol Maleate,Eye Drops,0.5%,C,13.20,10 mL,85134,Timolol maleate,exact,160054,Eye solution,pinned
+TINIDACA1,Tinidazole,Capsule,500 mg,B2,28.05,Capsule,85151,Tinidazole,exact,1608,Capsule,pinned
+TOLBUTTA1,Tolbutamide,Tablet,500 mg,C,9.65,Tablet,85203,Tolbutamide,exact,1513,Tablet,pinned
+TRAACICA1,Tranexamic Acid,Capsule,250 mg,C,3.52,Capsule,85286,Tranexamic acid,exact,1608,Capsule,pinned
+TRAACITA1,Tranexamic Acid,Tablet,500 mg,C,4.68,Tablet,85286,Tranexamic acid,exact,1513,Tablet,pinned
+TRIHEXTA1,Trihexyphenidyl,Tablet,2 mg,C,2.64,Tablet,85463,Trihexyphenidyl,exact,1513,Tablet,pinned
+TRIHEXTA2,Trihexyphenidyl,Tablet,5 mg,C,1.82,Tablet,85463,Trihexyphenidyl,exact,1513,Tablet,pinned
+VERAPATA1,Verapamil,Tablet,40 mg,C,0.44,Tablet,86176,Verapamil,exact,1513,Tablet,pinned
+VERAPATA2,Verapamil,Tablet,80 mg,C,1.00,Tablet,86176,Verapamil,exact,1513,Tablet,pinned
+WATFORIN1,Water for,Injection,,A,1.10,10 mL,163287,"Sterile water for injection, 1 ml ampule",pinned,1516,Solution for injection,pinned
+ZINCOOTA1,Zinc,Tablet,10 mg,A,0.18,Tablet,86672,Zinc,exact,1513,Tablet,pinned
+ZINCOOTA2,Zinc,Tablet,20 mg,A,0.17,Tablet,86672,Zinc,exact,1513,Tablet,pinned

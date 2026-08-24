@@ -1,0 +1,80 @@
+kind,term,ciel_id,note
+generic,Beclometasone dipropionate,71917,US spelling in CIEL
+generic,Betaxolol HCL,72139,CIEL name: Betaxolol hydrochloride
+generic,Calcium with Vitamin D,104053,CIEL name: Calcium carbonate / vitamin D
+generic,Carbamazepine Sustained-Release,72822,SR is a formulation attribute; kept in drug name
+generic,Carbocisteine Paediatric,72861,CIEL name: Carbocysteine
+generic,Ceftriazone,73041,NHIA PDF typo for Ceftriaxone
+generic,Clarithromycin Paediatric,73498,paediatric = the suspension formulation
+generic,Clindamycin Topical,73546,topical = the solution formulation
+generic,Dextromethorphan Containing Cough,74666,CIEL name: Dextromethorphan
+generic,Dextrose,74676,"CIEL name: Dextrose, anhydrous"
+generic,Dextrose in Sodium Chloride Intravenous,162857,CIEL name: Dextrose 5% in normal saline
+generic,Dihydroartemisin + Piperaquine Granular,162836,CIEL name: Dihydroartemisinin / piperaquine
+generic,Ephedrine HCI,75722,NHIA PDF typo (HCI) — Ephedrine hydrochloride
+generic,Ferrous Sulphate,76342,US spelling in CIEL (sulfate)
+generic,Ferrous Sulphate (BPC),76342,same concept; BPC mixture kept in drug name
+generic,Ferrous Sulphate + Folic Acid,773,CIEL name: Ferrous sulfate and folic acid
+generic,Gelatin,84388,CIEL name: Succinylated gelatin (the plasma expander)
+generic,Glyceryl Trinitrate Sublingual,80704,CIEL name: Nitroglycerin
+generic,Guaifenesin Containing Expectorant,77204,CIEL name: Guaifenesin
+generic,Human Immune Tetanus Globulins,84878,"CIEL name: Tetanus immune globulin, human"
+generic,Insulin Soluble HM,282,"CIEL name: Insulin, regular"
+generic,Insulin premixed (30/70) HM,159459,CIEL name: Insulin 70/30
+generic,Iron Dextran,78230,CIEL name: Iron-dextran complex
+generic,Isophane Insulin,78068,"CIEL name: Insulin, isophane, human"
+generic,Lisinopril + Hydrochlorthiazide,104833,CIEL name: Hydrochlorothiazide / lisinopril
+generic,Magnesium Sulphate,79247,US spelling in CIEL
+generic,Magnesium Trisilicate + Aluminium Hydroxide,103529,CIEL name: Aluminum hydroxide / magnesium trisilicate
+generic,Methyl Cellulose,79720,CIEL name: Methylcellulose
+generic,Morphine Sulphate,80109,US spelling in CIEL
+generic,Phenoxymethyl Penicillin,81730,CIEL name: Penicillin V
+generic,Povidone Iodine,82384,CIEL name: Povidone-iodine
+generic,Povidone Iodine Aqueous,82384,same concept; aqueous kept in drug name
+generic,Procaine Benzylpenicillin,81729,"CIEL name: Penicillin G, procaine"
+generic,Promethazine Theoclate,82667,CIEL name: Promethazine (theoclate salt absent from CIEL)
+generic,Retinol Soft,86339,CIEL name: Vitamin A
+generic,Ringer - Lactate,78617,CIEL name: Ringer's lactate
+generic,Salbutamol Sulphate,798,CIEL name: Salbutamol
+generic,Selenium Sulphide,83774,CIEL name: Selenium disulfide
+generic,Silver Sulphadiazine,83920,US spelling in CIEL
+generic,Tiabendazole,84994,CIEL name: Thiabendazole
+generic,Water for,163287,"CIEL name: Sterile water for injection, 1 ml ampule"
+form,Tablet,1513,
+form,Dispersible Tablet,162415,CIEL name: Disintegrating tablet
+form,Capsule,1608,
+form,Injection,1516,CIEL name: Solution for injection
+form,Infusion,1516,CIEL name: Solution for injection
+form,Suspension,162462,
+form,Oral Suspension,1940,
+form,Syrup,1515,
+form,Elixir,162770,CIEL name: Oral solution
+form,Mixture,162770,CIEL name: Oral solution
+form,Oral Solution,162770,
+form,Liquid,162770,CIEL name: Oral solution
+form,Oral Gel,162441,
+form,Cream,162413,
+form,Ointment,162776,CIEL name: Topical ointment
+form,Gel,162420,
+form,Lotion,162427,
+form,Shampoo,162459,
+form,Powder,162452,
+form,Suppository,162458,CIEL name: Rectal suppository
+form,Pessary,162474,CIEL name: Vaginal suppository
+form,Eye Drops,160054,CIEL name: Eye solution
+form,Eye Ointment,1520,CIEL name: Ophthalmic ointment
+form,Ear Drops,162445,CIEL name: Ear solution
+form,Nasal Drops,162432,CIEL name: Nasal solution
+form,Drops,162770,CIEL name: Oral solution (paediatric oral drops)
+form,Mouth Wash,162768,CIEL name: Mucous membrane topical solution
+form,Nebuliser Solution,162425,CIEL name: Inhalation solution
+form,Inhaler,162423,CIEL name: Inhalation form
+form,Rectal Solution,162772,
+form,Solution,162461,
+generic,Adrenaline,75744,CIEL name: Epinephrine
+generic,Amodiaquine + Artesunate,161182,
+generic,Anti RH Immunoglobulin,83322,CIEL name: Rho(d) immune globulin
+generic,Anti Tetanus Serum,84877,CIEL name: Tetanus antitoxin
+generic,Artemether + Lumefantrine,1447,CIEL name: Artemether-lumefantrine
+generic,Atenolol + Hydrochlorthiazide,161184,CIEL name: Atenolol / hydrochlorothiazide
+generic,Badoe's,161186,CIEL name: Badoe's solution
