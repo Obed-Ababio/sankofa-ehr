@@ -3,7 +3,11 @@
     "externalRefLinks": []
   },
   "@openmrs/esm-patient-chart-app": {
-    "showServiceQueueFields": true
+    "showServiceQueueFields": true,
+    "visitQueueNumberAttributeUuid": null
+  },
+  "@openmrs/esm-service-queues-app": {
+    "visitQueueNumberAttributeUuid": null
   },
   "@openmrs/esm-patient-registration-app": {
     "sections": ["demographics", "contact", "relationships"],
