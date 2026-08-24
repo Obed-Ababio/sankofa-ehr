@@ -49,6 +49,8 @@ Pending decisions/inputs:
 | 2.8 Chart review | ⬜ |
 | 2.9 FHIR contract test in CI | ⬜ |
 
+**Standing constraint (founder, 2026-08-24): offline-first is the default.** Deployment targets Ghanaian clinics with unreliable internet — the clinic must operate fully on the local network (registration, queues, consultation, prescribing all served by the on-site box), with patient data uploaded/synced to the cloud opportunistically whenever a connection is available. This makes **Profile B (clinic box: mini-PC + UPS, local compose, encrypted push-to-cloud when online, Tailscale support)** the default deployment profile; Profile A (cloud VM + 4G failover) only for clinics with proven reliable connectivity. Shapes Stage 3 (backup cadence must tolerate long offline stretches — queue-and-forward, not fixed nightly windows; heartbeat alerting must distinguish "offline clinic" from "dead clinic") and Stage 4 (provisioning, support). Record as ADR when Stage 4 profiles are finalized.
+
 Pending decisions/inputs for 2.1:
 - **Founder: line up the Ghanaian clinician** to review `docs/clinical/ghana-opd-value-set.md` (7 open questions are listed in the doc)
 - **Founder: create an OCL account** (openconceptlab.org — anonymous API access was disabled, so both the collection and any API verification need an account) and an org for Sankofa
