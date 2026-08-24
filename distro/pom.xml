@@ -74,6 +74,18 @@
                     dir="${project.build.directory}/${project.artifactId}-${project.version}/distro/binaries/openmrs/modules"
                     includes="initializer-2.6.0.omod" />
                 </delete>
+                <!-- The refapp demo drug list (320 US-market drugs + 469
+                     random-uuid drug concepts) would fight the NHIS formulary:
+                     demo concept names collide with the CIEL FSNs we create,
+                     and Initializer's intra-domain file order can't be relied
+                     on to retire them before ours load (bit us in CI). The
+                     Sankofa formulary fully replaces them, so remove the demo
+                     files from the build instead. -->
+                <delete>
+                  <fileset
+                    dir="${project.build.directory}/${project.artifactId}-${project.version}/distro/configs/openmrs/initializer_config"
+                    includes="drugs/drugs-core_demo.csv,concepts/drugs_concepts-core_demo.csv" />
+                </delete>
               </target>
             </configuration>
           </execution>
