@@ -26,7 +26,7 @@ Gate checklist: [gates/gate-1-patient-registry.md](gates/gate-1-patient-registry
 | 1.3 Address hierarchy (16 regions / 261 MMDAs) | ✅ Done (2026-08-21) — validator in CI asserts 16/261 |
 | 1.4 Registration form config | ✅ Done (2026-08-21) — Ghana Card/NHIS/legacy pinned, phone regex, estimated age, cascading address |
 | 1.5 Duplicate guard + SOP | ✅ Done (2026-08-22) — SOP + uniqueness; no similar-patient feature in reg app 6.1.0, no matching engine per plan |
-| 1.6 Roles & users (Front Desk, Clinician, Clinic Admin, Support) | ✅ Done (2026-08-22) — REST-level isolation verified; FHIR privilege gap documented for Stage 3 |
+| 1.6 Roles & users (Front Desk, Clinician, Clinic Admin, Support) | ✅ Done (2026-08-22) — REST-level isolation verified; FHIR privilege gap (CVE-2025-46823) fixed 2026-08-24 via fhir2 2.5.1 |
 | 1.7 Locations | ✅ Done (2026-08-21) — org → branch → rooms per ADR-0003; demo sites retired |
 | 1.8 Seed & performance tool (5,000 patients) | ✅ Done (2026-08-22) — 5,052 seeded @54/s; worst p95 666ms (gate <2s) |
 | 1.9 Playwright specs in CI | ✅ Done (2026-08-22) — 6 passing + 1 fixme (FHIR gap); search by all 5 paths |
@@ -57,6 +57,12 @@ Pending decisions/inputs for 2.1:
 - Upstream: CIEL 122604 (cholera) lacks an ICD-10 map; CIEL 86 (motor vehicle accident) carries a wrong map (N25.8) — report both to CIEL once we have the OCL/Talk account
 
 ## Session log
+
+### 2026-08-24 (night) — fhir2 privilege leak FIXED (CVE-2025-46823) (laptop)
+- The Stage 3 security item is closed early: the FHIR R4 clinical-read leak found in 1.6 turned out to be **CVE-2025-46823 / GHSA-g5vq-w8v2-4x9j (critical)** — fhir2 < 2.5.0 doesn't always enforce privileges. The refapp bundles fhir2 **2.0.0**; the distro build now swaps in **2.5.1** (patched 2.x line for platform 2.4.1+ — our core is 2.6.4; fhir2 3.x/4.x need platform ≥ 2.7) exactly like the Initializer swap in `distro/pom.xml`.
+- Verified live: frontdesk FHIR Observation/Encounter now denied (`Privileges required: Get Observations`) while FHIR Patient lookup still works; clinician keeps full clinical reads. Wart: the denial surfaces as HTTP **500** + OperationOutcome, not 403 (HAPI exception mapping) — no leak, but worth an upstream report/PR alongside the CIEL ones.
+- `roles.spec.ts`: the `test.fixme` is now a real assertion (denial text + clinician 200 + frontdesk Patient 200). Gotcha that cost a suite run: mixing two users in ONE Playwright test via the shared `request` fixture fails — the first user's `JSESSIONID` lands in the cookie jar and OpenMRS prefers it over the next request's Basic auth header, so the "clinician" call ran as frontdesk. Per-user `playwright.request.newContext()` fixes it.
+- `docs/security/roles.md` updated from "known gap" to fixed; e2e suite green (12 passed, 0 fixme).
 
 ### 2026-08-24 (evening) — Live workflow test as real roles (laptop, driven in Chrome)
 - Walked the full patient journey in the browser as the actual role accounts (not admin): frontdesk registered Kwame Mensah (folder ACC005013U auto-generated) and checked him in with queue fields → clinician at Triage saw him on the board, recorded vitals (38.6 °C flagged ↑, BMI auto-computed), transferred him to Consultation → prescribed Artemether+Lumefantrine from the NHIS formulary via the order basket ("Coming from: Triage" visible on the doctor's board) → FHIR `MedicationRequest` verified → visit ended. **This flow works end-to-end.**

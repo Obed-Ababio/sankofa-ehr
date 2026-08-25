@@ -63,9 +63,32 @@ test.describe.serial('role isolation', () => {
     }
   });
 
-  // KNOWN GAP (found 2026-08-22, tracked for Stage 3 hardening): the fhir2
-  // module does not enforce OpenMRS privileges — front desk receives clinical
-  // Observations via /ws/fhir2/R4/. When fixed (module upgrade, upstream PR,
-  // or proxy rule), turn this into a real assertion of 403.
-  test.fixme('front desk must be denied clinical reads via FHIR (fhir2 privilege gap)', async () => {});
+  // fhir2 < 2.5.0 did not enforce OpenMRS privileges (CVE-2025-46823) —
+  // front desk could read clinical Observations via /ws/fhir2/R4/. The distro
+  // upgrades fhir2 to 2.5.1; this pins the fix so a base-distro downgrade
+  // can't silently reopen the leak. 2.5.1 surfaces the denial as an
+  // OperationOutcome with HTTP 500 (not 403), so assert on the privilege
+  // message rather than the exact status.
+  // Each user needs its OWN request context: the shared `request` fixture
+  // keeps a cookie jar, and OpenMRS prefers the JSESSIONID from the first
+  // user's response over the Basic auth header of the next request.
+  test('front desk is denied clinical reads via FHIR, clinician is not', async ({ playwright, baseURL }) => {
+    const asFrontdesk = await playwright.request.newContext({ baseURL: baseURL!, extraHTTPHeaders: frontdesk });
+    const asClinician = await playwright.request.newContext({ baseURL: baseURL!, extraHTTPHeaders: clinician });
+    try {
+      for (const resource of ['Observation', 'Encounter']) {
+        const denied = await asFrontdesk.get(`/openmrs/ws/fhir2/R4/${resource}?_count=1`);
+        expect(denied.status(), `front desk must be denied FHIR ${resource}`).not.toBe(200);
+        expect(await denied.text(), `FHIR ${resource} denial must be a privilege check`).toContain('Privileges required');
+        const allowed = await asClinician.get(`/openmrs/ws/fhir2/R4/${resource}?_count=1`);
+        expect(allowed.status(), `clinician must be allowed FHIR ${resource}`).toBe(200);
+      }
+      // Front desk keeps what their job needs: FHIR patient lookup.
+      const patients = await asFrontdesk.get('/openmrs/ws/fhir2/R4/Patient?_count=1');
+      expect(patients.status()).toBe(200);
+    } finally {
+      await asFrontdesk.dispose();
+      await asClinician.dispose();
+    }
+  });
 });

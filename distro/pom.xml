@@ -19,6 +19,11 @@
     <!-- Initializer >= 2.7.0 is needed for the `queues` config domain (2.7);
          the refapp distro zip bundles 2.6.0, replaced during the build. -->
     <initializerVersion>2.12.0</initializerVersion>
+    <!-- fhir2 < 2.5.0 does not enforce OpenMRS privileges (CVE-2025-46823,
+         GHSA-g5vq-w8v2-4x9j) — any authenticated user could read clinical
+         data via /ws/fhir2/R4. The refapp bundles 2.0.0; 2.5.1 is the
+         patched line for platform 2.4.1+ (3.x/4.x need platform 2.7/2.8). -->
+    <fhir2Version>2.5.1</fhir2Version>
   </properties>
 
   <dependencies>
@@ -26,6 +31,12 @@
       <groupId>org.openmrs.module</groupId>
       <artifactId>initializer-omod</artifactId>
       <version>${initializerVersion}</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>fhir2-omod</artifactId>
+      <version>${fhir2Version}</version>
       <type>jar</type>
     </dependency>
   </dependencies>
@@ -50,6 +61,12 @@
                   <version>${initializerVersion}</version>
                   <destFileName>initializer-${initializerVersion}.omod</destFileName>
                 </artifactItem>
+                <artifactItem>
+                  <groupId>org.openmrs.module</groupId>
+                  <artifactId>fhir2-omod</artifactId>
+                  <version>${fhir2Version}</version>
+                  <destFileName>fhir2-${fhir2Version}.omod</destFileName>
+                </artifactItem>
               </artifactItems>
               <outputDirectory>
                 ${project.build.directory}/${project.artifactId}-${project.version}/distro/binaries/openmrs/modules</outputDirectory>
@@ -62,7 +79,7 @@
         <artifactId>maven-antrun-plugin</artifactId>
         <executions>
           <execution>
-            <id>Remove the refapp-bundled Initializer omod</id>
+            <id>Remove the refapp-bundled Initializer and fhir2 omods</id>
             <phase>prepare-package</phase>
             <goals>
               <goal>run</goal>
@@ -72,7 +89,7 @@
                 <delete>
                   <fileset
                     dir="${project.build.directory}/${project.artifactId}-${project.version}/distro/binaries/openmrs/modules"
-                    includes="initializer-2.6.0.omod" />
+                    includes="initializer-2.6.0.omod,fhir2-2.0.0.omod" />
                 </delete>
                 <!-- The refapp demo drug list (320 US-market drugs + 469
                      random-uuid drug concepts) would fight the NHIS formulary:
